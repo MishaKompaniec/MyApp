@@ -25,7 +25,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky",
-    "clean": "eslint --fix"
+    "lint-fix": "eslint --fix --ext .jsx,.js,.tsx,.ts src/ --max-warnings=0"
   },
   "eslintConfig": {
     "extends": [
