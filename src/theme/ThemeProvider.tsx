@@ -1,6 +1,5 @@
-import React, { PropsWithChildren } from 'react';
-
 import { ConfigProvider } from 'antd';
+import React, { PropsWithChildren } from 'react';
 
 import { colors } from './colors';
 

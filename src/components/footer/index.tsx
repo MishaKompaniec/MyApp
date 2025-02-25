@@ -1,30 +1,11 @@
 import React from 'react';
 
-const Footer: React.FC = () => {
-  return (
-    <footer>
-      <p>&copy; {new Date().getFullYear()} My App. All Rights Reserved.</p>
-      <div>
-        <a
-          href='https://facebook.com'
-          rel='noopener noreferrer'
-          target='_blank'
-        >
-          Facebook
-        </a>
-        <a href='https://twitter.com' rel='noopener noreferrer' target='_blank'>
-          Twitter
-        </a>
-        <a
-          href='https://linkedin.com'
-          rel='noopener noreferrer'
-          target='_blank'
-        >
-          LinkedIn
-        </a>
-      </div>
-    </footer>
-  );
-};
+import { FooterWrapper, FooterText } from './style';
+
+const Footer = () => (
+  <FooterWrapper>
+    <FooterText>&copy; {new Date().getFullYear()} Мой футер</FooterText>
+  </FooterWrapper>
+);
 
 export { Footer };

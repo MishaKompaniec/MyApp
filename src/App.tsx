@@ -1,16 +1,16 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
-import { Button } from 'antd';
-
-import { Header, Footer } from './components';
+import { Layout } from './components/layout';
+import Routes from './router';
 
 function App() {
   return (
-    <>
-      <Header />
-      <Button type='primary'>Нажми меня</Button>
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Layout>
+        <Routes />
+      </Layout>
+    </BrowserRouter>
   );
 }
 
