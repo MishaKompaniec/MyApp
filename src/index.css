@@ -3,9 +3,14 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-  color: #1c1c1c;
+  color: #ffffff;
 }
 
 h1, h2, h3 {
   font-family: 'Marck Script', cursive;
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
