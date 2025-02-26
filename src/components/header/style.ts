@@ -1,19 +1,29 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import { colors } from '@/theme/colors';
+
 export const HeaderWrapper = styled.div`
-  display: flex;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 50px;
   padding: 0 30px;
-  background-color: red;
+  background-color: ${colors.transparentBlack};
+  display: flex;
+  align-items: center;
+  z-index: 1000;
 `;
 
-export const Logo = styled(Link)`
-  background-color: red;
+export const LogoWrapper = styled(Link)`
   margin-right: auto;
-  color: white;
   text-decoration: none;
+`;
+
+export const Logo = styled.img`
+  width: 35px;
+  height: 35px;
 `;
 
 export const Menu = styled.div`
@@ -25,4 +35,5 @@ export const Menu = styled.div`
 export const MenuItem = styled(Link)`
   color: white;
   text-decoration: none;
+  font-family: 'Montserrat';
 `;

@@ -1,15 +1,16 @@
 import React from 'react';
 
-import { HeaderWrapper, Logo, Menu, MenuItem } from './style';
+import { HeaderWrapper, LogoWrapper, Logo, Menu, MenuItem } from './style';
 
 const Header = () => (
   <HeaderWrapper>
-    <Logo to="/">Logo</Logo>
+    <LogoWrapper to="/">
+      <Logo src="/images/logo.png" alt="flower" />
+    </LogoWrapper>
     <Menu>
-      <MenuItem to="/page1">Page 1</MenuItem>
-      <MenuItem to="/page2">Page 2</MenuItem>
-      <MenuItem to="/page3">Page 3</MenuItem>
-      <MenuItem to="/page4">Page 4</MenuItem>
+      <MenuItem to="/page1">МАГАЗИН</MenuItem>
+      <MenuItem to="/page2">О НАС</MenuItem>
+      <MenuItem to="/page3">КОНТАКТЫ</MenuItem>
     </Menu>
   </HeaderWrapper>
 );
