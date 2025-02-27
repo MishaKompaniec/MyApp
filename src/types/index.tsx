@@ -6,3 +6,8 @@ export interface IROUTE_MODEL<T> {
 export interface LayoutProps {
   children: React.ReactNode;
 }
+
+export interface AdvantageItemProps {
+  title: string;
+  text: string;
+}

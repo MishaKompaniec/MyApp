@@ -9,8 +9,9 @@ const Header = () => (
     </LogoWrapper>
     <Menu>
       <MenuItem to="/page1">МАГАЗИН</MenuItem>
-      <MenuItem to="/page2">О НАС</MenuItem>
-      <MenuItem to="/page3">КОНТАКТЫ</MenuItem>
+      <MenuItem to="/">О НАС</MenuItem>
+      <MenuItem to="/page2">ИЗБРАННОЕ</MenuItem>
+      <MenuItem to="/">КОНТАКТЫ</MenuItem>
     </Menu>
   </HeaderWrapper>
 );

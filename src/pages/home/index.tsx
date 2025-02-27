@@ -1,28 +1,13 @@
 import React from 'react';
 
-import {
-  MainWrapper,
-  Wrapper,
-  Title,
-  Description,
-  MainInfo,
-  Btn,
-} from './style';
+import Advantages from './advantages';
+import Intro from './intro';
 
 const Home = () => (
-  <MainWrapper>
-    <Wrapper>
-      <MainInfo>
-        <Title>flower</Title>
-        <Description>
-          Наши цены позволят вам дарить цветы без повода!
-        </Description>
-        <Btn type="primary" size="large">
-          Выбрать цветы
-        </Btn>
-      </MainInfo>
-    </Wrapper>
-  </MainWrapper>
+  <>
+    <Intro />
+    <Advantages />
+  </>
 );
 
 export default Home;
