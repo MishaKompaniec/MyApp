@@ -11,6 +11,17 @@ export const MainWrapper = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  animation: zoomAnimation 10s infinite alternate ease-in-out;
+
+  @keyframes zoomAnimation {
+    0% {
+      background-size: 100%;
+    }
+    100% {
+      background-size: 110%;
+    }
+  }
 `;
 
 export const Wrapper = styled.div`
