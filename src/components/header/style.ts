@@ -24,6 +24,16 @@ export const LogoWrapper = styled(Link)`
 export const Logo = styled.img`
   width: 35px;
   height: 35px;
+
+  &:hover {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in;
+  }
+
+  &:not(:hover) {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in;
+  }
 `;
 
 export const Menu = styled.div`
