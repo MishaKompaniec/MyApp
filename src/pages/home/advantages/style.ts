@@ -34,7 +34,6 @@ export const AdvantagesWraper = styled.div`
 
 export const AdvantagesItem = styled.div`
   display: flex;
-  align-items: center;
   gap: 15px;
 `;
 
