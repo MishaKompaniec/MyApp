@@ -10,7 +10,7 @@ const rotate = keyframes`
 export const InformWrapper = styled.div`
   width: 1200px;
   margin: 0 auto;
-  padding: 50px;
+  padding: 50px 0 50px 0;
   color: ${colors.black};
 `;
 

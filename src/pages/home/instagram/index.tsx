@@ -13,7 +13,15 @@ import {
 const Instagram = () => (
   <>
     <Title>
-      Следите за нами в <Inst>Instagram</Inst>
+      Следите за нами в
+      <Inst
+        href="https://www.instagram.com/misha_kompaniec"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {' '}
+        Instagram
+      </Inst>
     </Title>
     <FlexWrapper>
       <Image1 src="/images/image1.jpg" alt="Image 1" />
