@@ -3,5 +3,5 @@ export const colors = {
   white: 'ffffff',
   black: '#1c1c1c',
   transparentBlack: 'rgba(28, 28, 28, 0.35)',
-  pink: '#fadadd',
+  pink: '#eb949c',
 };
