@@ -10,15 +10,15 @@ export const Title = styled.h1`
 `;
 
 export const Image1 = styled.img`
-  width: 590px;
-  height: 600px;
+  width: 490px;
+  height: 500px;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
 export const ImageItem = styled.img`
-  width: 295px;
-  height: 295px;
+  width: 245px;
+  height: 245px;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
@@ -26,7 +26,7 @@ export const ImageItem = styled.img`
 export const FlexWrapper = styled.div`
   display: flex;
   gap: 10px;
-  width: 1200px;
+  width: 1000px;
   margin: 0 auto;
   padding: 30px 0 50px 0;
 `;
