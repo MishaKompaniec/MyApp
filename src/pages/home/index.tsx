@@ -1,5 +1,4 @@
-import React from 'react';
-
+import AboutUs from './aboutUs';
 import Advantages from './advantages';
 import BestSellers from './bestSellers';
 import Instagram from './instagram';
@@ -11,6 +10,7 @@ const Home = () => (
     <Advantages />
     <Instagram />
     <BestSellers />
+    <AboutUs />
   </>
 );
 
