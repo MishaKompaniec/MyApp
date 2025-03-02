@@ -1,10 +1,13 @@
 import React from 'react';
 
-import { FooterWrapper, FooterText } from './style';
+import { FooterWrapper, FooterText, FlexBox } from './style';
 
 const Footer = () => (
   <FooterWrapper>
-    <FooterText>&copy; {new Date().getFullYear()} Мой футер</FooterText>
+    <FlexBox>
+      <FooterText> +38 777 777 77 77</FooterText>
+      <FooterText>&copy; {new Date().getFullYear()}</FooterText>
+    </FlexBox>
   </FooterWrapper>
 );
 
