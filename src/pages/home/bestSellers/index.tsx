@@ -1,31 +1,50 @@
-import { Card } from 'antd';
-import React from 'react';
+import { Card, Button } from 'antd';
+import { Pagination, Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+import { bestSellers } from '@/utils/pages';
 
 import {
   Description,
   Wrapper,
   CardInfo,
   CardTitle,
+  Image,
   Title,
   Price,
-  Btn,
 } from './style';
 
 const BestSellers = () => (
   <Wrapper>
     <Title>Популярные товары</Title>
-    <Card
-      hoverable
-      style={{ width: 300 }}
-      cover={<img alt="image2" src="/images/image2.jpg" />}
+    <Swiper
+      slidesPerView={3}
+      spaceBetween={5}
+      pagination={{ clickable: true }}
+      modules={[Pagination, Autoplay]}
+      style={{ paddingBottom: '35px' }}
+      loop={true}
+      autoplay={{ delay: 3000, disableOnInteraction: false }}
     >
-      <CardInfo>
-        <CardTitle>Шикарный букет</CardTitle>
-        <Description>Букет из 101 розы сорта "Престиж"</Description>
-        <Price>4350 грн</Price>
-        <Btn type="primary">Добавить в корзину</Btn>
-      </CardInfo>
-    </Card>
+      {bestSellers.map((product) => (
+        <SwiperSlide key={product.id}>
+          <Card
+            hoverable
+            style={{ width: 300 }}
+            cover={<Image alt={product.title} src={product.image} />}
+          >
+            <CardInfo>
+              <CardTitle>{product.title}</CardTitle>
+              <Description>{product.description}</Description>
+              <Price>{product.price}</Price>
+              <Button type="primary">Добавить в корзину</Button>
+            </CardInfo>
+          </Card>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   </Wrapper>
 );
 
