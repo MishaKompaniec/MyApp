@@ -1,4 +1,7 @@
 body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,7 +9,18 @@ body {
   color: #ffffff;
 }
 
-h1, h2, h3 {
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+h1,
+h2,
+h3 {
   font-family: 'Marck Script', cursive;
   margin: 0;
 }
