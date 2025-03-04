@@ -1,12 +1,33 @@
+import { Tabs } from 'antd';
 import React from 'react';
 
-import { Header, Text } from './style';
+import Bouquets from './bouquets';
+import { Wrapper } from './style';
 
 const Store = () => (
-  <>
-    <Header>Страница 1</Header>
-    <Text>Здесь вы можете разместить содержимое страницы 1.</Text>
-  </>
+  <Wrapper>
+    <Tabs
+      defaultActiveKey="bouquets"
+      tabPosition="left"
+      items={[
+        {
+          label: 'БУКЕТЫ',
+          key: 'bouquets',
+          children: <Bouquets />,
+        },
+        {
+          label: 'РАСТЕНИЯ',
+          key: 'plants',
+          children: 'Содержимое вкладки Комнатные растения',
+        },
+        {
+          label: 'РАЗНОЕ',
+          key: 'misc',
+          children: 'Содержимое вкладки Разное',
+        },
+      ]}
+    />
+  </Wrapper>
 );
 
 export default Store;

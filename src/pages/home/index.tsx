@@ -1,6 +1,7 @@
+import BestSellers from '@/components/bestSellers';
+
 import AboutUs from './aboutUs';
 import Advantages from './advantages';
-import BestSellers from './bestSellers';
 import Instagram from './instagram';
 import Intro from './intro';
 

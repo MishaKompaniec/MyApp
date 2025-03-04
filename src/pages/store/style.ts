@@ -1,11 +1,7 @@
 import styled from 'styled-components';
 
-export const Header = styled.h1`
-  width: fit-content;
-  margin: 0 auto;
-  color: red;
-`;
+// import { colors } from '@/theme/colors';
 
-export const Text = styled.p`
-  color: black;
+export const Wrapper = styled.div`
+  padding-top: 50px;
 `;
