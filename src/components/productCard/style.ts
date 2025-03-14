@@ -2,6 +2,12 @@ import styled from 'styled-components';
 
 import { colors } from '@/theme/colors';
 
+export const CardWrapper = styled.div`
+  .ant-card .ant-card-body {
+    padding: 5px;
+  }
+`;
+
 export const CardInfo = styled.div`
   display: flex;
   flex-direction: column;
