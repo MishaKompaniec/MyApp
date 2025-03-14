@@ -2,6 +2,7 @@ import { Tabs } from 'antd';
 import React from 'react';
 
 import Bouquets from './bouquets';
+import Plants from './plants';
 import { Wrapper } from './style';
 
 const Store = () => (
@@ -18,7 +19,7 @@ const Store = () => (
         {
           label: 'РАСТЕНИЯ',
           key: 'plants',
-          children: 'Содержимое вкладки Комнатные растения',
+          children: <Plants />,
         },
         {
           label: 'РАЗНОЕ',
