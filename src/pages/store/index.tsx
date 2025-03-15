@@ -2,6 +2,7 @@ import { Tabs } from 'antd';
 import React from 'react';
 
 import Bouquets from './bouquets';
+import EdibleBouquets from './edibleBouquets';
 import Plants from './plants';
 import { Wrapper } from './style';
 
@@ -22,9 +23,9 @@ const Store = () => (
           children: <Plants />,
         },
         {
-          label: 'РАЗНОЕ',
-          key: 'misc',
-          children: 'Содержимое вкладки Разное',
+          label: 'ФРУТЕТЫ',
+          key: 'fruit',
+          children: <EdibleBouquets />,
         },
       ]}
     />

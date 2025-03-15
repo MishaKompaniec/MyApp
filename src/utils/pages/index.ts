@@ -196,7 +196,7 @@ export const bouquets = [
   {
     id: 17,
     title: 'Георгины',
-    description: 'Собраны на ферме под Киевом',
+    description: 'Самые свежие так как собраны на ферме под Киевом',
     price: '380 грн',
     image: '/images/image1.jpg',
   },
@@ -303,5 +303,64 @@ export const plants = [
       'Элегантное комнатное растение с длинными листьями, которое красиво смотрится в интерьере',
     price: '650 грн',
     image: '/images/plant3.jpg',
+  },
+];
+
+export const fruitBouquets = [
+  {
+    id: 1,
+    title: 'Ягодный рай',
+    description: 'Набор свежих ягод: клубника, малина, черника и ежевика.',
+    price: '800 грн',
+    image: '/images/food1.jpg',
+  },
+  {
+    id: 2,
+    title: 'Фантазия тропиков',
+    description: 'Манго, ананас, киви и маракуйя в изысканном оформлении.',
+    price: '950 грн',
+    image: '/images/food2.jpg',
+  },
+  {
+    id: 3,
+    title: 'Солнечный микс',
+    description: 'Апельсины, мандарины, персики и виноград в ярком букете.',
+    price: '850 грн',
+    image: '/images/food3.jpg',
+  },
+  {
+    id: 4,
+    title: 'Вишневый восторг',
+    description: 'Спелая вишня и черешня, дополненные декоративной зеленью.',
+    price: '900 грн',
+    image: '/images/food4.jpg',
+  },
+  {
+    id: 5,
+    title: 'Экзотический рай',
+    description: 'Драгонфрукт, кокос, манго и ананас в стильной композиции.',
+    price: '1 200 грн',
+    image: '/images/food2.jpg',
+  },
+  {
+    id: 6,
+    title: 'Клубничный рай',
+    description: 'Свежая клубника в сочетании с нежным шоколадным декором.',
+    price: '1 100 грн',
+    image: '/images/food1.jpg',
+  },
+  {
+    id: 7,
+    title: 'Фруктовый фейерверк',
+    description: 'Яркое сочетание арбуза, дыни, ананаса и киви.',
+    price: '980 грн',
+    image: '/images/food4.jpg',
+  },
+  {
+    id: 8,
+    title: 'Гранатовая страсть',
+    description: 'Гранат, красные яблоки и виноград в элегантной упаковке.',
+    price: '1 050 грн',
+    image: '/images/food3.jpg',
   },
 ];
