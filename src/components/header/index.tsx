@@ -1,19 +1,42 @@
 import React from 'react';
 
-import { HeaderWrapper, LogoWrapper, Logo, Menu, MenuItem } from './style';
+import {
+  HeaderWrapper,
+  LogoWrapper,
+  Logo,
+  Menu,
+  MenuItemLink,
+  MenuItem,
+} from './style';
 
-const Header = () => (
-  <HeaderWrapper>
-    <LogoWrapper to="/">
-      <Logo src="/images/logo.png" alt="flower" />
-    </LogoWrapper>
-    <Menu>
-      <MenuItem to="/store">МАГАЗИН</MenuItem>
-      <MenuItem to="/">О НАС</MenuItem>
-      <MenuItem to="/">ИЗБРАННОЕ</MenuItem>
-      <MenuItem to="/">КОНТАКТЫ</MenuItem>
-    </Menu>
-  </HeaderWrapper>
-);
+const Header = () => {
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about-us');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToBestSellers = () => {
+    const aboutSection = document.getElementById('bestSellers');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <HeaderWrapper>
+      <LogoWrapper to="/">
+        <Logo src="/images/logo.png" alt="flower" />
+      </LogoWrapper>
+      <Menu>
+        <MenuItemLink to="/store">МАГАЗИН</MenuItemLink>
+        <MenuItem onClick={scrollToAbout}>О НАС</MenuItem>
+        <MenuItem onClick={scrollToBestSellers}>ТОП ПРОДАЖ</MenuItem>
+        <MenuItem>КОНТАКТЫ</MenuItem>
+      </Menu>
+    </HeaderWrapper>
+  );
+};
 
 export { Header };

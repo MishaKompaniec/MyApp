@@ -17,7 +17,7 @@ import {
 } from './style';
 
 const BestSellers = () => (
-  <Wrapper>
+  <Wrapper id="bestSellers">
     <Title>Популярные товары</Title>
     <Swiper
       slidesPerView={3}

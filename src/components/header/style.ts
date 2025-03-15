@@ -42,8 +42,15 @@ export const Menu = styled.div`
   gap: 100px;
 `;
 
-export const MenuItem = styled(Link)`
+export const MenuItemLink = styled(Link)`
   color: white;
   text-decoration: none;
   font-family: 'Montserrat';
+`;
+
+export const MenuItem = styled.p`
+  color: white;
+  text-decoration: none;
+  font-family: 'Montserrat';
+  cursor: pointer;
 `;

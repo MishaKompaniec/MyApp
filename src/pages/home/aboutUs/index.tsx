@@ -1,7 +1,7 @@
 import { LeftTextBlock, RightTextBlock, Title, Wrapper, Text } from './style';
 
 const AboutUs = () => (
-  <Wrapper>
+  <Wrapper id="about-us">
     <Title>Flower — подари улыбку близкому человеку</Title>
     <LeftTextBlock>
       Порой так не хватает слов, чтобы выразить всю любовь. И лишь изящный букет
