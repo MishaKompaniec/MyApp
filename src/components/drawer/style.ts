@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const DrawerContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+`;
+
 export const Logo = styled.img`
   width: 35px;
   height: 35px;

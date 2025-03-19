@@ -11,3 +11,8 @@ export interface AdvantageItemProps {
   title: string;
   text: string;
 }
+
+export interface DrawerItemProps {
+  name: string;
+  price: number;
+}
