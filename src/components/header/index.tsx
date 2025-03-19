@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Drawer from '../drawer';
+
 import {
   HeaderWrapper,
   LogoWrapper,
@@ -34,6 +36,7 @@ const Header = () => {
         <MenuItem onClick={scrollToAbout}>О НАС</MenuItem>
         <MenuItem onClick={scrollToBestSellers}>ТОП ПРОДАЖ</MenuItem>
         <MenuItem>КОНТАКТЫ</MenuItem>
+        <Drawer />
       </Menu>
     </HeaderWrapper>
   );

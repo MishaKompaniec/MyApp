@@ -39,6 +39,7 @@ export const Logo = styled.img`
 export const Menu = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 100px;
 `;
 
