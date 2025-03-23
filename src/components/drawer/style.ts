@@ -17,3 +17,13 @@ export const MenuItem = styled.p`
   font-family: 'Montserrat';
   cursor: pointer;
 `;
+
+export const List = styled.ul`
+  padding: 0;
+`;
+
+export const ListItem = styled.li`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;

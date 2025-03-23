@@ -5,10 +5,10 @@ import { useCart } from '@/CartContext';
 
 import { DrawerItem } from '../drawerItem';
 
-import { DrawerContent, MenuItem } from './style';
+import { DrawerContent, MenuItem, ListItem, List } from './style';
 
 const Drawer = () => {
-  const { cart, removeFromCart, totalPrice, updateQuantity } = useCart();
+  const { cart, totalPrice } = useCart();
   const [open, setOpen] = useState(false);
 
   return (
@@ -18,36 +18,26 @@ const Drawer = () => {
         title="Корзина"
         onClose={() => setOpen(false)}
         open={open}
+        width={500}
       >
         <DrawerContent>
           {cart.length === 0 ? (
             <p>Корзина пуста</p>
           ) : (
-            <ul>
+            <List>
               {cart.map((item) => (
-                <li
-                  key={item.id}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                  }}
-                >
+                <ListItem key={item.id}>
                   <DrawerItem
                     id={item.id}
-                    name={item.name}
+                    name={item.title}
                     price={item.price}
                     quantity={item.quantity}
-                    updateQuantity={updateQuantity}
                   />
-                  <button onClick={() => removeFromCart(item.id)}>
-                    Удалить
-                  </button>
-                </li>
+                </ListItem>
               ))}
-            </ul>
+            </List>
           )}
-          <p>Итого: {totalPrice} ₽</p>
+          <p>Итого: {totalPrice} грн</p>
         </DrawerContent>
       </DrawerComponent>
     </>

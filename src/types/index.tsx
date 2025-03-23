@@ -17,5 +17,4 @@ export interface DrawerItemProps {
   name: string;
   price: number;
   quantity: number;
-  updateQuantity: (id: string, quantity: number) => void;
 }

@@ -3,7 +3,7 @@ import React, { createContext, useContext, useState } from 'react';
 // Интерфейс товара в корзине
 interface CartItem {
   id: string;
-  name: string;
+  title: string;
   price: number;
   quantity: number;
 }

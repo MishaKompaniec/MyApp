@@ -1,19 +1,43 @@
+import { Button } from 'antd';
 import styled from 'styled-components';
 
 import { colors } from '@/theme/colors';
 
 export const DrawerWrapper = styled.div`
+  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 `;
 
-export const Title = styled.p``;
+export const Title = styled.p`
+  min-width: 220px;
+`;
 
 export const Price = styled.h3`
+  margin-top: 5px;
+  margin-left: 5px;
   font-size: 18px;
   font-weight: bold;
   color: ${colors.pink};
 `;
 
-export const QuantityControls = styled.div``;
+export const QuantityControls = styled.div`
+  margin-left: 10px;
+`;
+
+export const Counter = styled.span`
+  margin: 0 7px;
+`;
+
+export const Btn = styled(Button)`
+  color: ${colors.red};
+  margin-left: auto;
+
+  &:hover {
+    color: ${colors.red} !important;
+  }
+
+  &:active {
+    color: ${colors.red} !important;
+  }
+`;
