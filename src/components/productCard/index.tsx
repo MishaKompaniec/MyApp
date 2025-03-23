@@ -1,5 +1,7 @@
 import { Card, Button } from 'antd';
 
+import { useCart } from '@/CartContext';
+
 import { Description, CardWrapper, CardInfo, CardTitle, Price } from './style';
 
 const ProductCard = ({
@@ -8,17 +10,23 @@ const ProductCard = ({
 }: {
   product: any;
   cover?: React.ReactNode;
-}) => (
-  <CardWrapper>
-    <Card hoverable style={{ width: 200 }} cover={cover}>
-      <CardInfo>
-        <CardTitle>{product.title}</CardTitle>
-        <Description>{product.description}</Description>
-        <Price>{product.price}</Price>
-        <Button type="primary">Добавить в корзину</Button>
-      </CardInfo>
-    </Card>
-  </CardWrapper>
-);
+}) => {
+  const { addToCart } = useCart();
+
+  return (
+    <CardWrapper>
+      <Card hoverable style={{ width: 200 }} cover={cover}>
+        <CardInfo>
+          <CardTitle>{product.title}</CardTitle>
+          <Description>{product.description}</Description>
+          <Price>{product.price}</Price>
+          <Button type="primary" onClick={() => addToCart(product)}>
+            Добавить в корзину
+          </Button>
+        </CardInfo>
+      </Card>
+    </CardWrapper>
+  );
+};
 
 export default ProductCard;

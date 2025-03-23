@@ -15,3 +15,5 @@ export const Price = styled.h3`
   font-weight: bold;
   color: ${colors.pink};
 `;
+
+export const QuantityControls = styled.div``;

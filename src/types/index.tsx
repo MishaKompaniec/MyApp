@@ -13,6 +13,9 @@ export interface AdvantageItemProps {
 }
 
 export interface DrawerItemProps {
+  id: string;
   name: string;
   price: number;
+  quantity: number;
+  updateQuantity: (id: string, quantity: number) => void;
 }
