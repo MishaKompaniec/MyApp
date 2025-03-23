@@ -14,6 +14,7 @@ export const Title = styled.p`
 `;
 
 export const Price = styled.h3`
+  min-width: 90px;
   margin-top: 5px;
   margin-left: 5px;
   font-size: 18px;
@@ -22,11 +23,16 @@ export const Price = styled.h3`
 `;
 
 export const QuantityControls = styled.div`
+  display: flex;
+  align-items: center;
   margin-left: 10px;
 `;
 
 export const Counter = styled.span`
+  display: block;
+  width: 20px;
   margin: 0 7px;
+  text-align: center;
 `;
 
 export const Btn = styled(Button)`

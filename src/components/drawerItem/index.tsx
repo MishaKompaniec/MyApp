@@ -1,4 +1,4 @@
-import { CloseOutlined } from '@ant-design/icons';
+import { CloseOutlined, PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
 import React, { FC } from 'react';
 
@@ -21,13 +21,17 @@ const DrawerItem: FC<DrawerItemProps> = ({ id, name, price, quantity }) => {
       <Title>{name}</Title>
       <Price>{price} грн</Price>
       <QuantityControls>
-        <Button size="small" onClick={() => updateQuantity(id, quantity - 1)}>
-          -
-        </Button>
+        <Button
+          size="small"
+          icon={<MinusOutlined />}
+          onClick={() => updateQuantity(id, quantity - 1)}
+        />
         <Counter>{quantity}</Counter>
-        <Button size="small" onClick={() => updateQuantity(id, quantity + 1)}>
-          +
-        </Button>
+        <Button
+          size="small"
+          icon={<PlusOutlined />}
+          onClick={() => updateQuantity(id, quantity + 1)}
+        />
       </QuantityControls>
       <Btn
         type="text"

@@ -27,3 +27,8 @@ export const ListItem = styled.li`
   align-items: center;
   justify-content: space-between;
 `;
+
+export const Total = styled.div`
+  width: fit-content;
+  margin: 0 auto;
+`;

@@ -5,7 +5,7 @@ import { useCart } from '@/CartContext';
 
 import { DrawerItem } from '../drawerItem';
 
-import { DrawerContent, MenuItem, ListItem, List } from './style';
+import { DrawerContent, MenuItem, ListItem, Total, List } from './style';
 
 const Drawer = () => {
   const { cart, totalPrice } = useCart();
@@ -37,7 +37,7 @@ const Drawer = () => {
               ))}
             </List>
           )}
-          <p>Итого: {totalPrice} грн</p>
+          <Total>Итого: {totalPrice} грн</Total>
         </DrawerContent>
       </DrawerComponent>
     </>
