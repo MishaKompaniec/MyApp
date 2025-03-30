@@ -26,6 +26,13 @@ const Header = () => {
     }
   };
 
+  const scrollToContacts = () => {
+    const contactsSection = document.getElementById('contacts');
+    if (contactsSection) {
+      contactsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <HeaderWrapper>
       <LogoWrapper to="/">
@@ -35,7 +42,7 @@ const Header = () => {
         <MenuItemLink to="/store">МАГАЗИН</MenuItemLink>
         <MenuItem onClick={scrollToAbout}>О НАС</MenuItem>
         <MenuItem onClick={scrollToBestSellers}>ТОП ПРОДАЖ</MenuItem>
-        <MenuItem>КОНТАКТЫ</MenuItem>
+        <MenuItem onClick={scrollToContacts}>КОНТАКТЫ</MenuItem>
         <Drawer />
       </Menu>
     </HeaderWrapper>
