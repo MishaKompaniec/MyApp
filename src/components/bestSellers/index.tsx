@@ -4,8 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import { bestSellers } from '@/utils/pages';
-
 import {
   Description,
   Wrapper,
@@ -15,6 +13,8 @@ import {
   Title,
   Price,
 } from './style';
+
+import { bestSellers } from '@/utils/pages';
 
 const BestSellers = () => (
   <Wrapper id="bestSellers">

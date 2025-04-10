@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 
 import { AdvantageItemProps } from '@/types';
-import { advantagesData } from '@/utils/pages';
 
 import {
   AdvantagesWraper,
@@ -14,6 +13,8 @@ import {
   Text,
   Img,
 } from './style';
+
+import { advantagesData } from '@/utils/pages';
 
 const AdvantageItem: FC<AdvantageItemProps> = ({ title, text }) => (
   <AdvantagesItem>

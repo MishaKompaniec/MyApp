@@ -1,9 +1,10 @@
 import React from 'react';
 
 import ProductCard from '@/components/productCard';
-import { fruitBouquets } from '@/utils/pages';
 
 import { Wrapper, Image } from './style';
+
+import { fruitBouquets } from '@/utils/pages';
 
 const EdibleBouquets = () => (
   <Wrapper>

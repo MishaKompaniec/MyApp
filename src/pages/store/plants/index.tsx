@@ -1,9 +1,10 @@
 import React from 'react';
 
 import ProductCard from '@/components/productCard';
-import { plants } from '@/utils/pages';
 
 import { Wrapper, Image } from './style';
+
+import { plants } from '@/utils/pages';
 
 const Plants = () => (
   <Wrapper>
