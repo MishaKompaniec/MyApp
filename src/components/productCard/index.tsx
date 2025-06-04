@@ -12,7 +12,8 @@ const ProductCard = ({
   product: CartItem;
   cover?: React.ReactNode;
 }) => {
-  const { addToCart } = useCart();
+  const { cart, addToCart, toggleCart } = useCart();
+  const isInCart = cart.some((item) => item.id === product.id);
 
   return (
     <CardWrapper>
@@ -21,8 +22,17 @@ const ProductCard = ({
           <CardTitle>{product.title}</CardTitle>
           <Description>{product.description}</Description>
           <Price>{product.price}</Price>
-          <Button type="primary" onClick={() => addToCart(product)}>
-            Добавить в корзину
+          <Button
+            type={isInCart ? 'default' : 'primary'}
+            onClick={() => {
+              if (isInCart) {
+                toggleCart();
+              } else {
+                addToCart(product);
+              }
+            }}
+          >
+            {isInCart ? 'Посмотреть корзину' : 'Добавить в корзину'}
           </Button>
         </CardInfo>
       </Card>

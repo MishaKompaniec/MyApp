@@ -5,9 +5,13 @@ import { CartItem } from './types';
 interface CartContextType {
   cart: CartItem[];
   totalPrice: number;
+  isCartOpen: boolean;
   addToCart: (item: CartItem) => void;
   removeFromCart: (id: string) => void;
   updateQuantity: (id: string, quantity: number) => void;
+  openCart: () => void;
+  closeCart: () => void;
+  toggleCart: () => void;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -16,6 +20,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [cart, setCart] = useState<CartItem[]>([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const addToCart = (item: CartItem) => {
     setCart((prevCart) => {
@@ -48,9 +53,23 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
     0,
   );
 
+  const openCart = () => setIsCartOpen(true);
+  const closeCart = () => setIsCartOpen(false);
+  const toggleCart = () => setIsCartOpen((prev) => !prev);
+
   return (
     <CartContext.Provider
-      value={{ cart, totalPrice, addToCart, removeFromCart, updateQuantity }}
+      value={{
+        cart,
+        totalPrice,
+        isCartOpen,
+        addToCart,
+        removeFromCart,
+        updateQuantity,
+        openCart,
+        closeCart,
+        toggleCart,
+      }}
     >
       {children}
     </CartContext.Provider>

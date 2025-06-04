@@ -1,5 +1,5 @@
 import { Drawer as DrawerComponent } from 'antd';
-import React, { useState } from 'react';
+import React from 'react';
 
 import { useCart } from '@/CartContext';
 
@@ -8,16 +8,15 @@ import { DrawerItem } from '../drawerItem';
 import { DrawerContent, MenuItem, ListItem, Total, List } from './style';
 
 const Drawer = () => {
-  const { cart, totalPrice } = useCart();
-  const [open, setOpen] = useState(false);
+  const { cart, totalPrice, isCartOpen, openCart, closeCart } = useCart();
 
   return (
     <>
-      <MenuItem onClick={() => setOpen(true)}>КОРЗИНА</MenuItem>
+      <MenuItem onClick={openCart}>КОРЗИНА</MenuItem>
       <DrawerComponent
         title="Корзина"
-        onClose={() => setOpen(false)}
-        open={open}
+        onClose={closeCart}
+        open={isCartOpen}
         width={500}
       >
         <DrawerContent>
