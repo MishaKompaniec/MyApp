@@ -27,6 +27,7 @@ export const bestSellers = [
     description: 'Букет из 101 розы сорта "Престиж"',
     price: 2150,
     image: '/images/image2.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -34,6 +35,7 @@ export const bestSellers = [
     description: '50 розовых роз в стильной корзине.',
     price: 3200,
     image: '/images/image3.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -41,6 +43,7 @@ export const bestSellers = [
     description: 'Нежные пионы и лаванда в коробке',
     price: 1650,
     image: '/images/image4.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -48,6 +51,7 @@ export const bestSellers = [
     description: '75 красных роз сорта "Гранд Престиж"',
     price: 680,
     image: '/images/image5.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -55,6 +59,7 @@ export const bestSellers = [
     description: 'Букет из 101 розы сорта "Престиж"',
     price: 1450,
     image: '/images/image2.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -62,6 +67,7 @@ export const bestSellers = [
     description: '50 розовых роз в стильной корзине',
     price: 1200,
     image: '/images/image3.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -69,6 +75,7 @@ export const bestSellers = [
     description: 'Нежные пионы и лаванда в коробке',
     price: 900,
     image: '/images/image4.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -76,6 +83,7 @@ export const bestSellers = [
     description: '75 красных роз сорта "Гранд Престиж"',
     price: 1200,
     image: '/images/image5.jpg',
+    quantity: 1,
   },
 ];
 
@@ -86,6 +94,7 @@ export const bouquets = [
     description: 'Красная роза с длинными стеблями',
     price: 740,
     image: '/images/image1.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -93,6 +102,7 @@ export const bouquets = [
     description: 'Лилия с белыми лепестками и желтым центром',
     price: 1200,
     image: '/images/image2.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -100,6 +110,7 @@ export const bouquets = [
     description: 'Тюльпаны разных цветов в букете',
     price: 430,
     image: '/images/image3.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -107,6 +118,7 @@ export const bouquets = [
     description: 'Роза с ярко-розовыми лепестками',
     price: 640,
     image: '/images/image4.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -114,6 +126,7 @@ export const bouquets = [
     description: 'Нежные белые лилии с зелеными листьями',
     price: 740,
     image: '/images/image5.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -121,6 +134,7 @@ export const bouquets = [
     description: 'Букет весенних тюльпанов с яркими цветами',
     price: 430,
     image: '/images/image2.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -128,6 +142,7 @@ export const bouquets = [
     description: 'Красная роза с маленькими бутонами',
     price: 500,
     image: '/images/image4.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -135,6 +150,7 @@ export const bouquets = [
     description: 'Лилия с экзотическим ароматом и розовыми лепестками',
     price: 800,
     image: '/images/image2.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -142,6 +158,7 @@ export const bouquets = [
     description: 'Тюльпаны с сочетанием белых и фиолетовых оттенков',
     price: 540,
     image: '/images/image3.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -149,6 +166,7 @@ export const bouquets = [
     description: 'Роза с насыщенным красным цветом и сильным ароматом',
     price: 660,
     image: '/images/image5.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -156,6 +174,7 @@ export const bouquets = [
     description: 'Лилия с белыми лепестками и розовыми кончиками',
     price: 750,
     image: '/images/image2.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -163,6 +182,7 @@ export const bouquets = [
     description: 'Букет тюльпанов с желтыми и оранжевыми цветами',
     price: 850,
     image: '/images/image1.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -170,6 +190,7 @@ export const bouquets = [
     description: 'Кустовая роза с множеством маленьких бутонов',
     price: 520,
     image: '/images/image1.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -177,6 +198,7 @@ export const bouquets = [
     description: 'Лилия с большими кремовыми лепестками',
     price: 650,
     image: '/images/image2.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -184,6 +206,7 @@ export const bouquets = [
     description: 'Красочные тюльпаны в букете для особого случая',
     price: 540,
     image: '/images/image4.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -191,6 +214,7 @@ export const bouquets = [
     description: 'Свежие только собраные с поля ромашки',
     price: 380,
     image: '/images/image1.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -198,6 +222,7 @@ export const bouquets = [
     description: 'Самые свежие так как собраны на ферме под Киевом',
     price: 400,
     image: '/images/image1.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -205,6 +230,7 @@ export const bouquets = [
     description: 'Тюльпаны с сочетанием белых и фиолетовых оттенков',
     price: 540,
     image: '/images/image3.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -212,6 +238,7 @@ export const bouquets = [
     description: 'Роза с насыщенным красным цветом и сильным ароматом',
     price: 600,
     image: '/images/image5.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -219,6 +246,7 @@ export const bouquets = [
     description: 'Лилия с белыми лепестками и розовыми кончиками',
     price: 1290,
     image: '/images/image2.jpg',
+    quantity: 1,
   },
 ];
 
@@ -230,6 +258,7 @@ export const plants = [
       'Зеленое домашнее растение с блестящими листьями, добавляющее уюта',
     price: 900,
     image: '/images/plant1.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -238,6 +267,7 @@ export const plants = [
       'Растение с мясистыми листьями, которое помогает в уходе за кожей',
     price: 345,
     image: '/images/plant2.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -246,6 +276,7 @@ export const plants = [
       'Цветущее комнатное растение с яркими цветами и целебными свойствами',
     price: 450,
     image: '/images/plant3.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -254,6 +285,7 @@ export const plants = [
       'Цветущее растение, известное как «женское счастье», с белыми цветами',
     price: 350,
     image: '/images/plant4.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -262,6 +294,7 @@ export const plants = [
       'Зеленое декоративное растение, которое подходит для увлажненных помещений',
     price: 1200,
     image: '/images/plant5.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -270,6 +303,7 @@ export const plants = [
       'Растение с яркими листьями, которые могут быть красными, желтыми или оранжевыми',
     price: 450,
     image: '/images/plant3.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -278,6 +312,7 @@ export const plants = [
       'Невероятно выносливое растение с жесткими листьями, идеально подходит для начинающих',
     price: 600,
     image: '/images/plant2.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -286,6 +321,7 @@ export const plants = [
       'Экзотическая орхидея с красивыми цветами, идеально подходит для украшения интерьера',
     price: 700,
     image: '/images/plant5.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -294,6 +330,7 @@ export const plants = [
       'Растение с глянцевыми листьями, которое подходит для помещений с низким освещением',
     price: 515,
     image: '/images/plant1.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -302,6 +339,7 @@ export const plants = [
       'Элегантное комнатное растение с длинными листьями, которое красиво смотрится в интерьере',
     price: 465,
     image: '/images/plant3.jpg',
+    quantity: 1,
   },
 ];
 
@@ -312,6 +350,7 @@ export const fruitBouquets = [
     description: 'Набор свежих ягод: клубника, малина, черника и ежевика.',
     price: 1000,
     image: '/images/food1.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -319,6 +358,7 @@ export const fruitBouquets = [
     description: 'Манго, ананас, киви и маракуйя в изысканном оформлении.',
     price: 1270,
     image: '/images/food2.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -326,6 +366,7 @@ export const fruitBouquets = [
     description: 'Апельсины, мандарины, персики и виноград в ярком букете.',
     price: 650,
     image: '/images/food3.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -333,6 +374,7 @@ export const fruitBouquets = [
     description: 'Спелая вишня и черешня, дополненные декоративной зеленью.',
     price: 555,
     image: '/images/food4.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -340,6 +382,7 @@ export const fruitBouquets = [
     description: 'Драгонфрукт, кокос, манго и ананас в стильной композиции.',
     price: 1010,
     image: '/images/food2.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -347,6 +390,7 @@ export const fruitBouquets = [
     description: 'Свежая клубника в сочетании с нежным шоколадным декором.',
     price: 1220,
     image: '/images/food1.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -354,6 +398,7 @@ export const fruitBouquets = [
     description: 'Яркое сочетание арбуза, дыни, ананаса и киви.',
     price: 980,
     image: '/images/food4.jpg',
+    quantity: 1,
   },
   {
     id: uuidv4(),
@@ -361,5 +406,6 @@ export const fruitBouquets = [
     description: 'Гранат, красные яблоки и виноград в элегантной упаковке.',
     price: 1150,
     image: '/images/food3.jpg',
+    quantity: 1,
   },
 ];

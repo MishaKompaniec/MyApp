@@ -1,6 +1,7 @@
 import { Card, Button } from 'antd';
 
 import { useCart } from '@/CartContext';
+import { CartItem } from '@/types';
 
 import { Description, CardWrapper, CardInfo, CardTitle, Price } from './style';
 
@@ -8,7 +9,7 @@ const ProductCard = ({
   product,
   cover,
 }: {
-  product: any;
+  product: CartItem;
   cover?: React.ReactNode;
 }) => {
   const { addToCart } = useCart();

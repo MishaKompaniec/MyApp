@@ -18,3 +18,11 @@ export interface DrawerItemProps {
   price: number;
   quantity: number;
 }
+
+export interface CartItem {
+  id: string;
+  title: string;
+  price: number;
+  quantity: number;
+  description: string;
+}
