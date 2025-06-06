@@ -5,6 +5,7 @@ import { colors } from '@/theme/colors';
 export const CardWrapper = styled.div`
   .ant-card .ant-card-body {
     padding: 10px 5px 15px 5px;
+    background-color: #fffafc;
   }
 `;
 

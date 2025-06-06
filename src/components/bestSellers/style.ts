@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import { colors } from '@/theme/colors';
 
 export const Wrapper = styled.div`
+  .ant-card .ant-card-body {
+    background-color: #fffafc;
+  }
+
   width: 1000px;
   margin: 0 auto;
   padding: 50px 0 50px 0;
