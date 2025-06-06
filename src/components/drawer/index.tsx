@@ -1,5 +1,6 @@
 import { Drawer as DrawerComponent } from 'antd';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { useCart } from '@/CartContext';
 
@@ -8,11 +9,12 @@ import { DrawerItem } from '../drawerItem';
 import { DrawerContent, MenuItem, ListItem, Total, List } from './style';
 
 const Drawer = () => {
+  const { t } = useTranslation();
   const { cart, totalPrice, isCartOpen, openCart, closeCart } = useCart();
 
   return (
     <>
-      <MenuItem onClick={openCart}>КОРЗИНА</MenuItem>
+      <MenuItem onClick={openCart}>{t('header.store')}</MenuItem>
       <DrawerComponent
         title="Корзина"
         onClose={closeCart}

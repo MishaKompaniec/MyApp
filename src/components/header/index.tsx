@@ -1,4 +1,7 @@
+import { Select } from 'antd';
+import i18n from 'i18next';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import Drawer from '../drawer';
@@ -15,6 +18,7 @@ import {
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { t } = useTranslation();
 
   const scrollToSection = (sectionId: string) => {
     if (location.pathname !== '/') {
@@ -42,15 +46,27 @@ const Header = () => {
         <Logo src="/images/logo.png" alt="flower" />
       </LogoWrapper>
       <Menu>
-        <MenuItemLink to="/store">МАГАЗИН</MenuItemLink>
-        <MenuItem onClick={() => scrollToSection('about-us')}>О НАС</MenuItem>
+        <MenuItemLink to="/store">{t('header.store')}</MenuItemLink>
+        <MenuItem onClick={() => scrollToSection('about-us')}>
+          {t('header.about')}
+        </MenuItem>
         <MenuItem onClick={() => scrollToSection('bestSellers')}>
-          ТОП ПРОДАЖ
+          {t('header.top')}
         </MenuItem>
         <MenuItem onClick={() => scrollToSection('contacts')}>
-          КОНТАКТЫ
+          {t('header.contacts')}
         </MenuItem>
         <Drawer />
+        <Select
+          defaultValue={i18n.language}
+          style={{ width: 100, marginLeft: 16 }}
+          onChange={(value) => i18n.changeLanguage(value)}
+          options={[
+            { value: 'en', label: 'EN' },
+            { value: 'ru', label: 'RU' },
+            { value: 'ua', label: 'UA' },
+          ]}
+        />
       </Menu>
     </HeaderWrapper>
   );
