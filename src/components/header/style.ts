@@ -9,55 +9,28 @@ export const Select = styled(AntSelect)`
     .ant-select-selector {
       background-color: transparent;
       border: 1px solid ${colors.white};
-      box-shadow: none;
+      box-shadow: none !important;
       color: ${colors.white};
-      transition:
-        color 0.3s ease,
-        border-color 0.3s ease;
+    }
+
+    &:hover .ant-select-selector {
+      border: 1px solid ${colors.white} !important;
     }
 
     &.ant-select-focused .ant-select-selector,
     &.ant-select-open .ant-select-selector {
-      box-shadow: none;
+      border: 1px solid ${colors.white} !important;
       background-color: transparent;
-      color: ${colors.primary};
-      border-color: ${colors.primary};
-    }
-
-    &:hover .ant-select-selector {
-      color: ${colors.primary};
-      border-color: ${colors.primary};
-    }
-    &:hover .ant-select-arrow {
-      color: ${colors.primary};
-    }
-
-    &:hover .ant-select-selection-item,
-    &:hover .ant-select-selection-placeholder {
-      color: ${colors.primary};
+      box-shadow: none !important;
     }
 
     .ant-select-selection-item,
     .ant-select-selection-placeholder {
       color: ${colors.white};
-      transition: color 0.3s ease;
-    }
-
-    &.ant-select-focused .ant-select-selection-item,
-    &.ant-select-focused .ant-select-selection-placeholder,
-    &.ant-select-open .ant-select-selection-item,
-    &.ant-select-open .ant-select-selection-placeholder {
-      color: ${colors.primary};
     }
 
     .ant-select-arrow {
       color: ${colors.white};
-      transition: color 0.3s ease;
-    }
-
-    &.ant-select-focused .ant-select-arrow,
-    &.ant-select-open .ant-select-arrow {
-      color: ${colors.primary};
     }
 
     .ant-select-dropdown {

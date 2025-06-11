@@ -58,6 +58,7 @@ const Header = () => {
         </MenuItem>
         <Drawer />
         <Select
+          popupClassName="custom-select-dropdown"
           defaultValue={i18n.language}
           onChange={(value) => {
             i18n.changeLanguage(String(value));

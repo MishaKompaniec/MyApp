@@ -28,3 +28,21 @@ h3 {
 p {
   margin: 0;
 }
+
+.custom-select-dropdown {
+  background-color: #50c878;
+}
+
+.custom-select-dropdown .ant-select-item-option-content {
+  color: white;
+}
+
+.custom-select-dropdown .ant-select-item-option-active,
+.custom-select-dropdown .ant-select-item-option-selected {
+  background-color: rgba(0, 100, 0, 0.7);
+}
+
+.custom-select-dropdown
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: rgba(0, 100, 0, 0.7);
+}
