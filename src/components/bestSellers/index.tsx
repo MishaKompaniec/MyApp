@@ -1,4 +1,5 @@
 import { Card, Button } from 'antd';
+import { useTranslation } from 'react-i18next';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -19,10 +20,11 @@ import {
 
 const BestSellers = () => {
   const { cart, addToCart, toggleCart } = useCart();
+  const { t } = useTranslation();
 
   return (
     <Wrapper id="bestSellers">
-      <Title>Популярные товары</Title>
+      <Title>{t('bestSellers.title')}</Title>
       <Swiper
         slidesPerView={3}
         spaceBetween={5}
