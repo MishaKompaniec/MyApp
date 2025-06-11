@@ -1,4 +1,3 @@
-import { Select } from 'antd';
 import i18n from 'i18next';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -13,6 +12,7 @@ import {
   Menu,
   MenuItemLink,
   MenuItem,
+  Select,
 } from './style';
 
 const Header = () => {
@@ -59,8 +59,9 @@ const Header = () => {
         <Drawer />
         <Select
           defaultValue={i18n.language}
-          style={{ width: 100, marginLeft: 16 }}
-          onChange={(value) => i18n.changeLanguage(value)}
+          onChange={(value) => {
+            i18n.changeLanguage(String(value));
+          }}
           options={[
             { value: 'en', label: 'EN' },
             { value: 'ru', label: 'RU' },
