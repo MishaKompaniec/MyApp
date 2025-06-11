@@ -26,3 +26,8 @@ export interface CartItem {
   quantity: number;
   description: string;
 }
+
+export interface Advantage {
+  title: string;
+  text: string;
+}

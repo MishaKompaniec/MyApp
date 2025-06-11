@@ -4,5 +4,27 @@
     "about": "ABOUT US",
     "top": "BEST SELLERS",
     "contacts": "CONTACTS"
+  },
+  "intro": {
+    "description": "Our prices let you give flowers for no reason at all!",
+    "btn": "Choose flowers"
+  },
+  "advantages": {
+    "title": "Advantages of flower",
+    "info": "Every day we learn and experiment, creating new floral arrangements. We strive to be a little better today than we were yesterday, to make our customers happy.",
+    "cards": {
+      "florists": {
+        "title": "Talented florists",
+        "text": "Our florists have years of experience and certificates confirming their expertise"
+      },
+      "fresh": {
+        "title": "Always fresh flowers",
+        "text": "Our bouquets will delight you for at least a week and a half"
+      },
+      "prices": {
+        "title": "Lowest prices in the city",
+        "text": "Our flower prices are on average 20% lower than in any other flower shop"
+      }
+    }
   }
 }

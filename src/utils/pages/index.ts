@@ -1,24 +1,31 @@
+import { useTranslation } from 'react-i18next';
 import { v4 as uuidv4 } from 'uuid';
+
+import { Advantage } from '@/types';
 
 export enum Pages {
   HOME = '/',
   PAGE1 = '/store',
 }
 
-export const advantagesData = [
-  {
-    title: 'Талантливые флористы',
-    text: 'Наши флористы имеют многолетний опыт работы и сертификаты, подтверждающие их компетенции',
-  },
-  {
-    title: 'Всегда свежие цветы',
-    text: 'Наши букеты будут вас радовать как минимум полторы недели',
-  },
-  {
-    title: 'Самые низкие цены в городе',
-    text: 'Цена на наши цветы в среднем на 20% ниже, чем в любом другом цветочном магазине',
-  },
-];
+export const useAdvantagesData = (): Advantage[] => {
+  const { t } = useTranslation();
+
+  return [
+    {
+      title: t('advantages.cards.florists.title'),
+      text: t('advantages.cards.florists.text'),
+    },
+    {
+      title: t('advantages.cards.fresh.title'),
+      text: t('advantages.cards.fresh.text'),
+    },
+    {
+      title: t('advantages.cards.prices.title'),
+      text: t('advantages.cards.prices.text'),
+    },
+  ];
+};
 
 export const bestSellers = [
   {

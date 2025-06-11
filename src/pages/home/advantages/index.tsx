@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { AdvantageItemProps } from '@/types';
-import { advantagesData } from '@/utils/pages';
+import { useAdvantagesData } from '@/utils/pages';
 
 import {
   AdvantagesWraper,
@@ -25,20 +26,21 @@ const AdvantageItem: FC<AdvantageItemProps> = ({ title, text }) => (
   </AdvantagesItem>
 );
 
-const Advantages = () => (
-  <InformWrapper>
-    <Title>Преимущества flower</Title>
-    <Info>
-      Каждый день мы учимся и экспериментируем, создавая новые цветочные
-      композиции. Мы стремимся стать сегодня чуточку лучше, чем были вчера,
-      чтобы делать наших клиентов счастливыми.
-    </Info>
-    <AdvantagesWraper>
-      {advantagesData.map((advantage, index) => (
-        <AdvantageItem key={index} {...advantage} />
-      ))}
-    </AdvantagesWraper>
-  </InformWrapper>
-);
+const Advantages = () => {
+  const { t } = useTranslation();
+  const advantagesData = useAdvantagesData();
+
+  return (
+    <InformWrapper>
+      <Title>{t('advantages.title')}</Title>
+      <Info>{t('advantages.info')}</Info>
+      <AdvantagesWraper>
+        {advantagesData.map((advantage, index) => (
+          <AdvantageItem key={index} {...advantage} />
+        ))}
+      </AdvantagesWraper>
+    </InformWrapper>
+  );
+};
 
 export default Advantages;
