@@ -13,6 +13,7 @@ import {
   MenuItemLink,
   MenuItem,
   Select,
+  FlexBox,
 } from './style';
 
 const Header = () => {
@@ -56,19 +57,21 @@ const Header = () => {
         <MenuItem onClick={() => scrollToSection('contacts')}>
           {t('header.contacts')}
         </MenuItem>
-        <Drawer />
-        <Select
-          popupClassName="custom-select-dropdown"
-          defaultValue={i18n.language}
-          onChange={(value) => {
-            i18n.changeLanguage(String(value));
-          }}
-          options={[
-            { value: 'en', label: 'EN' },
-            { value: 'ru', label: 'RU' },
-            { value: 'ua', label: 'UA' },
-          ]}
-        />
+        <FlexBox>
+          <Drawer />
+          <Select
+            popupClassName="custom-select-dropdown"
+            defaultValue={i18n.language}
+            onChange={(value) => {
+              i18n.changeLanguage(String(value));
+            }}
+            options={[
+              { value: 'en', label: 'EN' },
+              { value: 'ru', label: 'RU' },
+              { value: 'ua', label: 'UA' },
+            ]}
+          />
+        </FlexBox>
       </Menu>
     </HeaderWrapper>
   );

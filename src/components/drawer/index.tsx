@@ -6,7 +6,7 @@ import { useCart } from '@/CartContext';
 
 import { DrawerItem } from '../drawerItem';
 
-import { DrawerContent, MenuItem, ListItem, Total, List } from './style';
+import { DrawerContent, ListItem, Total, List, Basket } from './style';
 
 const Drawer = () => {
   const { t } = useTranslation();
@@ -14,7 +14,7 @@ const Drawer = () => {
 
   return (
     <>
-      <MenuItem onClick={openCart}>{t('header.basket')}</MenuItem>
+      <Basket onClick={openCart} src="/images/basket.png" alt="basket" />
       <DrawerComponent
         title={t('basket.title')}
         onClose={closeCart}

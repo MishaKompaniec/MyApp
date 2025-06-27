@@ -100,3 +100,8 @@ export const MenuItem = styled.p`
   font-family: 'Montserrat';
   cursor: pointer;
 `;
+
+export const FlexBox = styled.div`
+  display: flex;
+  gap: 15px;
+`;
