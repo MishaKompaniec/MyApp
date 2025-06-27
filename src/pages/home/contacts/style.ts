@@ -2,11 +2,15 @@ import styled from 'styled-components';
 
 import { colors } from '@/theme/colors';
 
-export const Wrapper = styled.div`
+export const InnerWrapper = styled.div`
   width: 1000px;
   margin: 0 auto;
-  padding: 0 0 50px 0;
+  padding: 25px 0 25px 0;
   color: ${colors.black};
+`;
+
+export const Wrapper = styled.div`
+  background-color: ${colors.pinkBg};
 `;
 
 export const Title = styled.h1`

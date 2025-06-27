@@ -5,7 +5,7 @@ import { colors } from '@/theme/colors';
 export const CardWrapper = styled.div`
   .ant-card .ant-card-body {
     padding: 10px 5px 15px 5px;
-    background-color: #fffafc;
+    background-color: ${colors.lightPinkBg};
   }
 `;
 
@@ -23,6 +23,7 @@ export const CardTitle = styled.h3`
 `;
 
 export const Description = styled.p`
+  min-height: 36px;
   font-size: 12px;
   text-align: center;
   display: -webkit-box;
