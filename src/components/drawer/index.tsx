@@ -16,14 +16,14 @@ const Drawer = () => {
     <>
       <MenuItem onClick={openCart}>{t('header.basket')}</MenuItem>
       <DrawerComponent
-        title="Корзина"
+        title={t('basket.title')}
         onClose={closeCart}
         open={isCartOpen}
         width={500}
       >
         <DrawerContent>
           {cart.length === 0 ? (
-            <p>Корзина пуста</p>
+            <p>{t('basket.empty')}</p>
           ) : (
             <List>
               {cart.map((item) => (
@@ -38,7 +38,7 @@ const Drawer = () => {
               ))}
             </List>
           )}
-          <Total>Итого: {totalPrice} грн</Total>
+          <Total>{t('basket.total', { total: totalPrice })}</Total>
         </DrawerContent>
       </DrawerComponent>
     </>

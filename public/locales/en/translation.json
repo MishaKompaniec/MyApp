@@ -57,5 +57,11 @@
       "sun": "Sun: 10:00 AM – 4:00 PM"
     },
     "note": "Flower delivery around the city, wedding and event decoration."
+  },
+
+  "basket": {
+    "title": "Cart",
+    "empty": "Cart is empty",
+    "total": "Total: {{total}} UAH"
   }
 }
