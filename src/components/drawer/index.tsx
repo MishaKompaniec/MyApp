@@ -26,14 +26,9 @@ const Drawer = () => {
             <p>{t('basket.empty')}</p>
           ) : (
             <List>
-              {cart.map((item) => (
-                <ListItem key={item.id}>
-                  <DrawerItem
-                    id={item.id}
-                    name={item.title}
-                    price={item.price}
-                    quantity={item.quantity}
-                  />
+              {cart.map((product) => (
+                <ListItem key={product.id}>
+                  <DrawerItem product={product} />
                 </ListItem>
               ))}
             </List>

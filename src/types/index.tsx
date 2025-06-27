@@ -13,10 +13,7 @@ export interface AdvantageItemProps {
 }
 
 export interface DrawerItemProps {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
+  product: CartItem;
 }
 
 export interface CartItem {
