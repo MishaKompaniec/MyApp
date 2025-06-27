@@ -63,5 +63,45 @@
     "title": "Cart",
     "empty": "Cart is empty",
     "total": "Total: {{total}} UAH"
+  },
+  "bestSellersBlock": {
+    "title": "Best Sellers",
+    "addToCart": "Add to Cart",
+    "viewCart": "View Cart",
+    "bouquet1": {
+      "title": "Luxurious Bouquet",
+      "description": "Bouquet of 101 roses of 'Prestige' variety"
+    },
+    "basket1": {
+      "title": "Roses in a Basket",
+      "description": "50 pink roses in a stylish basket."
+    },
+    "aroma1": {
+      "title": "Aromatic Composition",
+      "description": "Tender peonies and lavender in a box"
+    },
+    "roses1": {
+      "title": "Red Roses",
+      "description": "75 red roses of 'Grand Prestige' variety"
+    },
+    "bouquet2": {
+      "title": "Luxurious Bouquet",
+      "description": "Bouquet of 101 roses of 'Prestige' variety"
+    },
+    "basket2": {
+      "title": "Roses in a Basket",
+      "description": "50 pink roses in a stylish basket"
+    },
+    "aroma2": {
+      "title": "Aromatic Composition",
+      "description": "Tender peonies and lavender in a box"
+    },
+    "roses2": {
+      "title": "Red Roses",
+      "description": "75 red roses of 'Grand Prestige' variety"
+    }
+  },
+  "currency": {
+    "uah": "uah"
   }
 }

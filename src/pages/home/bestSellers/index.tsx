@@ -31,7 +31,7 @@ const BestSellers = () => {
         pagination={{ clickable: true }}
         modules={[Pagination, Autoplay]}
         style={{ paddingBottom: '35px' }}
-        loop={true}
+        loop
         autoplay={{ delay: 3000, disableOnInteraction: false }}
       >
         {bestSellers.map((product) => {
@@ -42,12 +42,14 @@ const BestSellers = () => {
               <Card
                 hoverable
                 style={{ width: 300 }}
-                cover={<Image alt={product.title} src={product.image} />}
+                cover={<Image alt={t(product.title)} src={product.image} />}
               >
                 <CardInfo>
-                  <CardTitle>{product.title}</CardTitle>
-                  <Description>{product.description}</Description>
-                  <Price>{product.price}</Price>
+                  <CardTitle>{t(product.title)}</CardTitle>
+                  <Description>{t(product.description)}</Description>
+                  <Price>
+                    {product.price} {t('currency.uah')}
+                  </Price>
                   <Button
                     type={isInCart ? 'default' : 'primary'}
                     onClick={() => {
@@ -58,7 +60,9 @@ const BestSellers = () => {
                       }
                     }}
                   >
-                    {isInCart ? 'Посмотреть корзину' : 'Добавить в корзину'}
+                    {isInCart
+                      ? t('bestSellers.viewCart')
+                      : t('bestSellers.addToCart')}
                   </Button>
                 </CardInfo>
               </Card>
