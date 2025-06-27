@@ -24,6 +24,7 @@ export const ListItem = styled.li`
 export const Total = styled.div`
   width: fit-content;
   margin: 0 auto;
+  font-weight: 500;
 `;
 
 export const Basket = styled.img`

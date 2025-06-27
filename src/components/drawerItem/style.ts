@@ -1,3 +1,4 @@
+import { CloseOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
 import styled from 'styled-components';
 
@@ -13,13 +14,10 @@ export const Title = styled.p`
   min-width: 220px;
 `;
 
-export const Price = styled.h3`
+export const Price = styled.p`
   min-width: 90px;
   margin-top: 5px;
   margin-left: 5px;
-  font-size: 18px;
-  font-weight: bold;
-  color: ${colors.pink};
 `;
 
 export const QuantityControls = styled.div`
@@ -46,4 +44,8 @@ export const Btn = styled(Button)`
   &:active {
     color: ${colors.red} !important;
   }
+`;
+
+export const CloseBtn = styled(CloseOutlined)`
+  color: ${colors.pink};
 `;
