@@ -1,4 +1,5 @@
 import { Card, Button } from 'antd';
+import { useTranslation } from 'react-i18next';
 
 import { useCart } from '@/CartContext';
 import { CartItem } from '@/types';
@@ -14,14 +15,19 @@ const ProductCard = ({
 }) => {
   const { cart, addToCart, toggleCart } = useCart();
   const isInCart = cart.some((item) => item.id === product.id);
+  const { t } = useTranslation();
 
   return (
     <CardWrapper>
       <Card hoverable style={{ width: 200 }} cover={cover}>
         <CardInfo>
-          <CardTitle>{product.title}</CardTitle>
-          <Description>{product.description}</Description>
-          <Price>{product.price}</Price>
+          <CardTitle>{t(`${product.category}.${product.id}.title`)}</CardTitle>
+          <Description>
+            {t(`${product.category}.${product.id}.description`)}
+          </Description>
+          <Price>
+            {product.price} {t('currency.uah')}
+          </Price>
           <Button
             type={isInCart ? 'default' : 'primary'}
             onClick={() => {
@@ -32,7 +38,9 @@ const ProductCard = ({
               }
             }}
           >
-            {isInCart ? 'Посмотреть корзину' : 'Добавить в корзину'}
+            {isInCart
+              ? t('bestSellersBlock.viewCart')
+              : t('bestSellersBlock.addToCart')}
           </Button>
         </CardInfo>
       </Card>

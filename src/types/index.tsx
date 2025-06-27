@@ -25,6 +25,7 @@ export interface CartItem {
   price: number;
   quantity: number;
   description: string;
+  category: string;
 }
 
 export interface Advantage {

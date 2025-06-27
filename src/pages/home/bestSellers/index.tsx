@@ -61,8 +61,8 @@ const BestSellers = () => {
                     }}
                   >
                     {isInCart
-                      ? t('bestSellers.viewCart')
-                      : t('bestSellers.addToCart')}
+                      ? t('bestSellersBlock.viewCart')
+                      : t('bestSellersBlock.addToCart')}
                   </Button>
                 </CardInfo>
               </Card>

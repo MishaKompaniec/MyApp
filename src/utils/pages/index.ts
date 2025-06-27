@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import { v4 as uuidv4 } from 'uuid';
 
 import { Advantage } from '@/types';
 
@@ -29,6 +28,7 @@ export const useAdvantagesData = (): Advantage[] => {
 
 export const bestSellers = [
   {
+    category: 'bestSellers',
     id: 'bouquet1',
     title: 'bestSellersBlock.bouquet1.title',
     description: 'bestSellersBlock.bouquet1.description',
@@ -37,6 +37,7 @@ export const bestSellers = [
     quantity: 1,
   },
   {
+    category: 'bestSellers',
     id: 'basket1',
     title: 'bestSellersBlock.basket1.title',
     description: 'bestSellersBlock.basket1.description',
@@ -45,6 +46,7 @@ export const bestSellers = [
     quantity: 1,
   },
   {
+    category: 'bestSellers',
     id: 'aroma1',
     title: 'bestSellersBlock.aroma1.title',
     description: 'bestSellersBlock.aroma1.description',
@@ -53,6 +55,7 @@ export const bestSellers = [
     quantity: 1,
   },
   {
+    category: 'bestSellers',
     id: 'roses1',
     title: 'bestSellersBlock.roses1.title',
     description: 'bestSellersBlock.roses1.description',
@@ -61,6 +64,7 @@ export const bestSellers = [
     quantity: 1,
   },
   {
+    category: 'bestSellers',
     id: 'bouquet2',
     title: 'bestSellersBlock.bouquet2.title',
     description: 'bestSellersBlock.bouquet2.description',
@@ -69,6 +73,7 @@ export const bestSellers = [
     quantity: 1,
   },
   {
+    category: 'bestSellers',
     id: 'basket2',
     title: 'bestSellersBlock.basket2.title',
     description: 'bestSellersBlock.basket2.description',
@@ -77,6 +82,7 @@ export const bestSellers = [
     quantity: 1,
   },
   {
+    category: 'bestSellers',
     id: 'aroma2',
     title: 'bestSellersBlock.aroma2.title',
     description: 'bestSellersBlock.aroma2.description',
@@ -85,6 +91,7 @@ export const bestSellers = [
     quantity: 1,
   },
   {
+    category: 'bestSellers',
     id: 'roses2',
     title: 'bestSellersBlock.roses2.title',
     description: 'bestSellersBlock.roses2.description',
@@ -96,7 +103,8 @@ export const bestSellers = [
 
 export const bouquets = [
   {
-    id: uuidv4(),
+    category: 'bouquets',
+    id: 'redRose',
     title: 'Красная роза',
     description: 'Красная роза с длинными стеблями',
     price: 740,
@@ -104,7 +112,8 @@ export const bouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'bouquets',
+    id: 'whiteLily',
     title: 'Белая лилия',
     description: 'Лилия с белыми лепестками и желтым центром',
     price: 1200,
@@ -112,7 +121,8 @@ export const bouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'bouquets',
+    id: 'colorfulTulips',
     title: 'Разноцветные тюльпаны',
     description: 'Тюльпаны разных цветов в букете',
     price: 430,
@@ -120,7 +130,8 @@ export const bouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'bouquets',
+    id: 'brightPinkRose',
     title: 'Ярко-розовая роза',
     description: 'Роза с ярко-розовыми лепестками',
     price: 640,
@@ -128,7 +139,8 @@ export const bouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'bouquets',
+    id: 'gentleWhiteLilies',
     title: 'Нежные белые лилии',
     description: 'Нежные белые лилии с зелеными листьями',
     price: 740,
@@ -136,7 +148,8 @@ export const bouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'bouquets',
+    id: 'springTulips',
     title: 'Весенние тюльпаны',
     description: 'Букет весенних тюльпанов с яркими цветами',
     price: 430,
@@ -144,7 +157,8 @@ export const bouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'bouquets',
+    id: 'miniRoses',
     title: 'Мини-розы',
     description: 'Красная роза с маленькими бутонами',
     price: 500,
@@ -152,7 +166,8 @@ export const bouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'bouquets',
+    id: 'exoticLily',
     title: 'Экзотическая лилия',
     description: 'Лилия с экзотическим ароматом и розовыми лепестками',
     price: 800,
@@ -160,7 +175,8 @@ export const bouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'bouquets',
+    id: 'purpleTulips',
     title: 'Фиолетовые тюльпаны',
     description: 'Тюльпаны с сочетанием белых и фиолетовых оттенков',
     price: 540,
@@ -168,7 +184,8 @@ export const bouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'bouquets',
+    id: 'deepRedRose',
     title: 'Насыщенная роза',
     description: 'Роза с насыщенным красным цветом и сильным ароматом',
     price: 660,
@@ -176,7 +193,8 @@ export const bouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'bouquets',
+    id: 'pinkTippedLily',
     title: 'Розовая лилия',
     description: 'Лилия с белыми лепестками и розовыми кончиками',
     price: 750,
@@ -184,7 +202,8 @@ export const bouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'bouquets',
+    id: 'orangeTulips',
     title: 'Оранжевые тюльпаны',
     description: 'Букет тюльпанов с желтыми и оранжевыми цветами',
     price: 850,
@@ -192,7 +211,8 @@ export const bouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'bouquets',
+    id: 'bushRose',
     title: 'Кустовая роза',
     description: 'Кустовая роза с множеством маленьких бутонов',
     price: 520,
@@ -200,7 +220,8 @@ export const bouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'bouquets',
+    id: 'creamLily',
     title: 'Кремовая лилия',
     description: 'Лилия с большими кремовыми лепестками',
     price: 650,
@@ -208,7 +229,8 @@ export const bouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'bouquets',
+    id: 'festiveTulips',
     title: 'Праздничные тюльпаны',
     description: 'Красочные тюльпаны в букете для особого случая',
     price: 540,
@@ -216,7 +238,8 @@ export const bouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'bouquets',
+    id: 'fieldDaisies',
     title: 'Полевые ромашки',
     description: 'Свежие только собраные с поля ромашки',
     price: 380,
@@ -224,7 +247,8 @@ export const bouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'bouquets',
+    id: 'dahlias',
     title: 'Георгины',
     description: 'Самые свежие так как собраны на ферме под Киевом',
     price: 400,
@@ -232,7 +256,8 @@ export const bouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'bouquets',
+    id: 'purpleTulips2',
     title: 'Фиолетовые тюльпаны',
     description: 'Тюльпаны с сочетанием белых и фиолетовых оттенков',
     price: 540,
@@ -240,7 +265,8 @@ export const bouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'bouquets',
+    id: 'deepRedRose2',
     title: 'Насыщенная роза',
     description: 'Роза с насыщенным красным цветом и сильным ароматом',
     price: 600,
@@ -248,7 +274,8 @@ export const bouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'bouquets',
+    id: 'pinkTippedLily2',
     title: 'Розовая лилия',
     description: 'Лилия с белыми лепестками и розовыми кончиками',
     price: 1290,
@@ -259,91 +286,91 @@ export const bouquets = [
 
 export const plants = [
   {
-    id: uuidv4(),
-    title: 'Фикус',
-    description:
-      'Зеленое домашнее растение с блестящими листьями, добавляющее уюта',
+    category: 'plants',
+    id: 'ficus',
+    title: 'plants.ficus.title',
+    description: 'plants.ficus.description',
     price: 900,
     image: '/images/plant1.jpg',
     quantity: 1,
   },
   {
-    id: uuidv4(),
-    title: 'Алое',
-    description:
-      'Растение с мясистыми листьями, которое помогает в уходе за кожей',
+    category: 'plants',
+    id: 'aloe',
+    title: 'plants.aloe.title',
+    description: 'plants.aloe.description',
     price: 345,
     image: '/images/plant2.jpg',
     quantity: 1,
   },
   {
-    id: uuidv4(),
-    title: 'Каланхоэ',
-    description:
-      'Цветущее комнатное растение с яркими цветами и целебными свойствами',
+    category: 'plants',
+    id: 'kalanchoe',
+    title: 'plants.kalanchoe.title',
+    description: 'plants.kalanchoe.description',
     price: 450,
     image: '/images/plant3.jpg',
     quantity: 1,
   },
   {
-    id: uuidv4(),
-    title: 'Спатифиллум',
-    description:
-      'Цветущее растение, известное как «женское счастье», с белыми цветами',
+    category: 'plants',
+    id: 'spathiphyllum',
+    title: 'plants.spathiphyllum.title',
+    description: 'plants.spathiphyllum.description',
     price: 350,
     image: '/images/plant4.jpg',
     quantity: 1,
   },
   {
-    id: uuidv4(),
-    title: 'Папоротник',
-    description:
-      'Зеленое декоративное растение, которое подходит для увлажненных помещений',
+    category: 'plants',
+    id: 'fern',
+    title: 'plants.fern.title',
+    description: 'plants.fern.description',
     price: 1200,
     image: '/images/plant5.jpg',
     quantity: 1,
   },
   {
-    id: uuidv4(),
-    title: 'Кротон',
-    description:
-      'Растение с яркими листьями, которые могут быть красными, желтыми или оранжевыми',
+    category: 'plants',
+    id: 'croton',
+    title: 'plants.croton.title',
+    description: 'plants.croton.description',
     price: 450,
     image: '/images/plant3.jpg',
     quantity: 1,
   },
   {
-    id: uuidv4(),
-    title: 'Сансевиерия',
-    description:
-      'Невероятно выносливое растение с жесткими листьями, идеально подходит для начинающих',
+    category: 'plants',
+    id: 'sansevieria',
+    title: 'plants.sansevieria.title',
+    description: 'plants.sansevieria.description',
     price: 600,
     image: '/images/plant2.jpg',
     quantity: 1,
   },
   {
-    id: uuidv4(),
-    title: 'Фаленопсис',
-    description:
-      'Экзотическая орхидея с красивыми цветами, идеально подходит для украшения интерьера',
+    category: 'plants',
+    id: 'phalaenopsis',
+    title: 'plants.phalaenopsis.title',
+    description: 'plants.phalaenopsis.description',
     price: 700,
     image: '/images/plant5.jpg',
     quantity: 1,
   },
   {
-    id: uuidv4(),
-    title: 'Замиокулькас',
-    description:
-      'Растение с глянцевыми листьями, которое подходит для помещений с низким освещением',
+    category: 'plants',
+    id: 'zamioculcas',
+    title: 'plants.zamioculcas.title',
+    description: 'plants.zamioculcas.description',
     price: 515,
     image: '/images/plant1.jpg',
     quantity: 1,
   },
   {
-    id: uuidv4(),
-    title: 'Драцена',
-    description:
-      'Элегантное комнатное растение с длинными листьями, которое красиво смотрится в интерьере',
+    category: 'plants',
+    id: 'dracaena',
+    title: 'plants.dracaena.title',
+    description: 'plants.dracaena.description',
     price: 465,
     image: '/images/plant3.jpg',
     quantity: 1,
@@ -352,7 +379,8 @@ export const plants = [
 
 export const fruitBouquets = [
   {
-    id: uuidv4(),
+    category: 'fruitBouquets',
+    id: 'berryParadise',
     title: 'Ягодный рай',
     description: 'Набор свежих ягод: клубника, малина, черника и ежевика.',
     price: 1000,
@@ -360,7 +388,8 @@ export const fruitBouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'fruitBouquets',
+    id: 'tropicalFantasy',
     title: 'Фантазия тропиков',
     description: 'Манго, ананас, киви и маракуйя в изысканном оформлении.',
     price: 1270,
@@ -368,7 +397,8 @@ export const fruitBouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'fruitBouquets',
+    id: 'sunnyMix',
     title: 'Солнечный микс',
     description: 'Апельсины, мандарины, персики и виноград в ярком букете.',
     price: 650,
@@ -376,7 +406,8 @@ export const fruitBouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'fruitBouquets',
+    id: 'cherryDelight',
     title: 'Вишневый восторг',
     description: 'Спелая вишня и черешня, дополненные декоративной зеленью.',
     price: 555,
@@ -384,7 +415,8 @@ export const fruitBouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'fruitBouquets',
+    id: 'exoticParadise',
     title: 'Экзотический рай',
     description: 'Драгонфрукт, кокос, манго и ананас в стильной композиции.',
     price: 1010,
@@ -392,7 +424,8 @@ export const fruitBouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'fruitBouquets',
+    id: 'strawberryParadise',
     title: 'Клубничный рай',
     description: 'Свежая клубника в сочетании с нежным шоколадным декором.',
     price: 1220,
@@ -400,7 +433,8 @@ export const fruitBouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'fruitBouquets',
+    id: 'fruitFirework',
     title: 'Фруктовый фейерверк',
     description: 'Яркое сочетание арбуза, дыни, ананаса и киви.',
     price: 980,
@@ -408,7 +442,8 @@ export const fruitBouquets = [
     quantity: 1,
   },
   {
-    id: uuidv4(),
+    category: 'fruitBouquets',
+    id: 'pomegranatePassion',
     title: 'Гранатовая страсть',
     description: 'Гранат, красные яблоки и виноград в элегантной упаковке.',
     price: 1150,
