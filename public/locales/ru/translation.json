@@ -63,7 +63,6 @@
     "empty": "Корзина пуста",
     "total": "Итого: {{total}} грн"
   },
-
   "bestSellersBlock": {
     "title": "Хиты продаж",
     "addToCart": "Добавить в корзину",

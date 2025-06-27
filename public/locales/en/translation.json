@@ -58,10 +58,9 @@
     },
     "note": "Flower delivery around the city, wedding and event decoration."
   },
-
   "basket": {
-    "title": "Cart",
-    "empty": "Cart is empty",
+    "title": "Basket",
+    "empty": "Basket is empty",
     "total": "Total: {{total}} UAH"
   },
   "bestSellersBlock": {
