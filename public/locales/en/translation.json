@@ -65,8 +65,8 @@
   },
   "bestSellersBlock": {
     "title": "Best Sellers",
-    "addToCart": "Add to Cart",
-    "viewCart": "View Cart",
+    "addToCart": "Add to Basket",
+    "viewCart": "View Basket",
     "bouquet1": {
       "title": "Luxurious Bouquet",
       "description": "Bouquet of 101 roses of 'Prestige' variety"
