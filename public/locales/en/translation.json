@@ -216,11 +216,23 @@
       "title": "Purple Tulips",
       "description": "Tulips in white and purple tones"
     },
+    "purpleTulips2": {
+      "title": "Purple Tulips",
+      "description": "Tulips in white and purple tones"
+    },
     "deepRedRose": {
       "title": "Deep Red Rose",
       "description": "A rose with a deep red color and strong fragrance"
     },
+    "deepRedRose2": {
+      "title": "Deep Red Rose",
+      "description": "A rose with a deep red color and strong fragrance"
+    },
     "pinkTippedLily": {
+      "title": "Pink-Tipped Lily",
+      "description": "A lily with white petals and pink tips"
+    },
+    "pinkTippedLily2": {
       "title": "Pink-Tipped Lily",
       "description": "A lily with white petals and pink tips"
     },
@@ -248,5 +260,10 @@
       "title": "Dahlias",
       "description": "Freshly picked dahlias from a farm near Kyiv"
     }
+  },
+  "store": {
+    "bouquets": "BOUQUETS",
+    "plants": "PLANTS",
+    "fruitBouquets": "FRUITETS"
   }
 }
