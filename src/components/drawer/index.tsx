@@ -14,7 +14,7 @@ const Drawer = () => {
 
   return (
     <>
-      <MenuItem onClick={openCart}>{t('header.store')}</MenuItem>
+      <MenuItem onClick={openCart}>{t('header.basket')}</MenuItem>
       <DrawerComponent
         title="Корзина"
         onClose={closeCart}
