@@ -10,7 +10,7 @@ export const InnerWrapper = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  background-color: ${colors.pinkBg};
+  background-color: ${colors.lightPinkBg};
 `;
 
 export const Title = styled.h1`
