@@ -1,6 +1,14 @@
 import { useTranslation } from 'react-i18next';
 
-import { LeftTextBlock, RightTextBlock, Title, Wrapper, Text } from './style';
+import {
+  LeftTextBlock,
+  RightTextBlock,
+  Title,
+  Wrapper,
+  Text,
+  Img,
+  FlexBox,
+} from './style';
 
 const AboutUs = () => {
   const { t } = useTranslation();
@@ -10,11 +18,22 @@ const AboutUs = () => {
       <Title>
         {t('about-us.hero')} {t('about-us.title')}
       </Title>
-      <LeftTextBlock>{t('about-us.block1')}</LeftTextBlock>
-      <RightTextBlock>{t('about-us.block2')}</RightTextBlock>
-      <LeftTextBlock>{t('about-us.block3')}</LeftTextBlock>
-      <RightTextBlock>{t('about-us.block4')}</RightTextBlock>
-      <LeftTextBlock>{t('about-us.block5')}</LeftTextBlock>
+      <FlexBox>
+        <LeftTextBlock>{t('about-us.block1')}</LeftTextBlock>
+        <Img src="/images/romashka.png" alt="flower" />
+      </FlexBox>
+      <FlexBox>
+        <Img src="/images/romashka.png" alt="flower" />
+        <RightTextBlock>{t('about-us.block2')}</RightTextBlock>
+      </FlexBox>
+      <FlexBox>
+        <LeftTextBlock>{t('about-us.block3')}</LeftTextBlock>
+        <Img src="/images/romashka.png" alt="flower" />
+      </FlexBox>
+      <FlexBox>
+        <Img src="/images/romashka.png" alt="flower" />
+        <RightTextBlock>{t('about-us.block4')}</RightTextBlock>
+      </FlexBox>
       <Text>{t('about-us.block6')}</Text>
     </Wrapper>
   );

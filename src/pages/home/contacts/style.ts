@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { colors } from '@/theme/colors';
 
 export const InnerWrapper = styled.div`
-  width: 1000px;
   margin: 0 auto;
   padding: 25px 0 25px 0;
   color: ${colors.black};

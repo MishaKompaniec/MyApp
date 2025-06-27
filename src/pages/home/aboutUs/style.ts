@@ -1,12 +1,18 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import { colors } from '@/theme/colors';
 
 export const Wrapper = styled.div`
-  width: 1000px;
   margin: 0 auto;
-  padding: 25px 0 50px 0;
+  padding: 25px 25px 50px 25px;
   color: ${colors.black};
+`;
+
+export const FlexBox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
 `;
 
 export const Title = styled.h1`
@@ -22,11 +28,19 @@ export const Text = styled.div``;
 
 export const LeftTextBlock = styled.div`
   max-width: 600px;
-  margin-bottom: 30px;
 `;
 
 export const RightTextBlock = styled.div`
   max-width: 600px;
-  margin-left: auto;
-  margin-bottom: 30px;
+`;
+
+const rotate = keyframes`
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+`;
+
+export const Img = styled.img`
+  width: 150px;
+  height: 150px;
+  animation: ${rotate} 10s linear infinite;
 `;
