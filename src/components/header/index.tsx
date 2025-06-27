@@ -1,9 +1,9 @@
-import i18n from 'i18next';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import Drawer from '../drawer';
+import { LanguageSelect } from '../select';
 
 import {
   HeaderWrapper,
@@ -12,7 +12,6 @@ import {
   Menu,
   MenuItemLink,
   MenuItem,
-  Select,
   FlexBox,
 } from './style';
 
@@ -59,18 +58,7 @@ const Header = () => {
         </MenuItem>
         <FlexBox>
           <Drawer />
-          <Select
-            popupClassName="custom-select-dropdown"
-            defaultValue={i18n.language}
-            onChange={(value) => {
-              i18n.changeLanguage(String(value));
-            }}
-            options={[
-              { value: 'en', label: 'EN' },
-              { value: 'ru', label: 'RU' },
-              { value: 'ua', label: 'UA' },
-            ]}
-          />
+          <LanguageSelect />
         </FlexBox>
       </Menu>
     </HeaderWrapper>
