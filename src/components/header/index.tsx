@@ -1,8 +1,10 @@
-import React from 'react';
+import { MenuOutlined } from '@ant-design/icons';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import Drawer from '../drawer';
+import { MobileMenuDrawer } from '../mobileMenuDrawer';
 import { LanguageSelect } from '../select';
 
 import {
@@ -13,6 +15,7 @@ import {
   MenuItemLink,
   MenuItem,
   FlexBox,
+  BurgerButton,
 } from './style';
 
 const Header = () => {
@@ -20,12 +23,13 @@ const Header = () => {
   const location = useLocation();
   const { t } = useTranslation();
 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const scrollToSection = (sectionId: string) => {
+    setIsMobileMenuOpen(false);
     if (location.pathname !== '/') {
       navigate('/', { replace: false });
-      setTimeout(() => {
-        scrollToElement(sectionId);
-      }, 100);
+      setTimeout(() => scrollToElement(sectionId), 100);
     } else {
       scrollToElement(sectionId);
     }
@@ -50,17 +54,24 @@ const Header = () => {
         <MenuItem onClick={() => scrollToSection('about-us')}>
           {t('header.about')}
         </MenuItem>
-        <MenuItem onClick={() => scrollToSection('bestSellers')}>
-          {t('header.top')}
-        </MenuItem>
         <MenuItem onClick={() => scrollToSection('contacts')}>
           {t('header.contacts')}
         </MenuItem>
-        <FlexBox>
-          <Drawer />
-          <LanguageSelect />
-        </FlexBox>
       </Menu>
+
+      <FlexBox>
+        <Drawer />
+        <LanguageSelect />
+      </FlexBox>
+
+      <BurgerButton onClick={() => setIsMobileMenuOpen((prev) => !prev)}>
+        <MenuOutlined />
+      </BurgerButton>
+
+      <MobileMenuDrawer
+        setIsMobileMenuOpen={setIsMobileMenuOpen}
+        isMobileMenuOpen={isMobileMenuOpen}
+      />
     </HeaderWrapper>
   );
 };

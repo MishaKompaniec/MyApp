@@ -17,7 +17,6 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const LogoWrapper = styled(Link)`
-  margin-right: auto;
   text-decoration: none;
 `;
 
@@ -41,15 +40,22 @@ export const Menu = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 100px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const MenuItemLink = styled(Link)`
+  font-size: clamp(12px, 2vw, 16px);
   color: white;
   text-decoration: none;
   font-family: 'Montserrat';
 `;
 
 export const MenuItem = styled.p`
+  font-size: clamp(12px, 2vw, 16px);
   color: white;
   text-decoration: none;
   font-family: 'Montserrat';
@@ -59,4 +65,22 @@ export const MenuItem = styled.p`
 export const FlexBox = styled.div`
   display: flex;
   gap: 15px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const BurgerButton = styled.button`
+  display: none;
+  margin-left: auto;
+
+  @media (max-width: 768px) {
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
 `;
