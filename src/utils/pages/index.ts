@@ -12,16 +12,16 @@ export const useAdvantagesData = (): Advantage[] => {
 
   return [
     {
-      title: t('advantages.cards.florists.title'),
-      text: t('advantages.cards.florists.text'),
+      title: t('advantages.cards.prices.title'),
+      text: t('advantages.cards.prices.text'),
     },
     {
       title: t('advantages.cards.fresh.title'),
       text: t('advantages.cards.fresh.text'),
     },
     {
-      title: t('advantages.cards.prices.title'),
-      text: t('advantages.cards.prices.text'),
+      title: t('advantages.cards.florists.title'),
+      text: t('advantages.cards.florists.text'),
     },
   ];
 };
