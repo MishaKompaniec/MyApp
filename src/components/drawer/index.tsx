@@ -1,5 +1,5 @@
 import { Drawer as DrawerComponent } from 'antd';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { useCart } from '@/CartContext';
@@ -11,6 +11,14 @@ import { DrawerContent, ListItem, Total, List, Basket } from './style';
 const Drawer = () => {
   const { t } = useTranslation();
   const { cart, totalPrice, isCartOpen, openCart, closeCart } = useCart();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => setIsMobile(window.innerWidth < 768);
+    checkScreen();
+    window.addEventListener('resize', checkScreen);
+    return () => window.removeEventListener('resize', checkScreen);
+  }, []);
 
   return (
     <>
@@ -19,7 +27,7 @@ const Drawer = () => {
         title={t('basket.title')}
         onClose={closeCart}
         open={isCartOpen}
-        width={500}
+        width={isMobile ? '100%' : 500}
       >
         <DrawerContent>
           {cart.length === 0 ? (

@@ -17,7 +17,7 @@ export const FlexBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 1000px;
+  width: 100%;
   margin: 0 auto;
 `;
 

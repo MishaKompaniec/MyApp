@@ -13,7 +13,7 @@ export const HeaderWrapper = styled.div`
   background-color: ${colors.transparentBlack};
   display: flex;
   align-items: center;
-  z-index: 9999;
+  z-index: 1000;
 `;
 
 export const LogoWrapper = styled(Link)`
