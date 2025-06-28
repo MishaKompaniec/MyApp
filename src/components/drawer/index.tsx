@@ -6,7 +6,7 @@ import { useCart } from '@/CartContext';
 
 import { DrawerItem } from '../drawerItem';
 
-import { DrawerContent, ListItem, Total, List, Basket } from './style';
+import { DrawerContent, ListItem, Total, List, Basket, Btn } from './style';
 
 const Drawer = () => {
   const { t } = useTranslation();
@@ -42,6 +42,11 @@ const Drawer = () => {
             </List>
           )}
           <Total>{t('basket.total', { total: totalPrice })}</Total>
+          {cart.length > 0 && (
+            <Btn type="primary" size="large">
+              {t('basket.btn')}
+            </Btn>
+          )}
         </DrawerContent>
       </DrawerComponent>
     </>

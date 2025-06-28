@@ -1,3 +1,4 @@
+import { Button } from 'antd';
 import styled from 'styled-components';
 
 export const DrawerContent = styled.div`
@@ -31,4 +32,19 @@ export const Basket = styled.img`
   width: 35px;
   height: 35px;
   cursor: pointer;
+`;
+
+export const Btn = styled(Button)`
+  height: 50px;
+  font-size: 20px;
+
+  @media (max-width: 768px) {
+    height: 45px;
+    font-size: 18px;
+  }
+
+  @media (max-width: 480px) {
+    height: 40px;
+    font-size: 16px;
+  }
 `;

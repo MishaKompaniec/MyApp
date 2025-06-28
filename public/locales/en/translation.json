@@ -60,7 +60,8 @@
   "basket": {
     "title": "Basket",
     "empty": "Basket is empty",
-    "total": "Total: {{total}} UAH"
+    "total": "Total: {{total}} UAH",
+    "btn": "Checkout"
   },
   "bestSellersBlock": {
     "title": "Best Sellers",

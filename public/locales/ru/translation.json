@@ -60,7 +60,8 @@
   "basket": {
     "title": "Корзина",
     "empty": "Корзина пуста",
-    "total": "Итого: {{total}} грн"
+    "total": "Итого: {{total}} грн",
+    "btn": " Оформить заказ"
   },
   "bestSellersBlock": {
     "title": "Хиты продаж",
