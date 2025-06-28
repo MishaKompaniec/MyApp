@@ -1,5 +1,5 @@
 import { Tabs } from 'antd';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Bouquets from './bouquets';
@@ -9,12 +9,20 @@ import { Wrapper } from './style';
 
 const Store = () => {
   const { t } = useTranslation();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => setIsMobile(window.innerWidth < 768);
+    checkScreen();
+    window.addEventListener('resize', checkScreen);
+    return () => window.removeEventListener('resize', checkScreen);
+  }, []);
 
   return (
     <Wrapper>
       <Tabs
         defaultActiveKey="bouquets"
-        tabPosition="left"
+        tabPosition={isMobile ? 'top' : 'left'}
         items={[
           {
             label: t('store.bouquets'),
