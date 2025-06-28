@@ -11,9 +11,8 @@ export const InnerWrapper = styled.div`
     background-color: ${colors.lightPinkBg};
   }
 
-  width: 1000px;
   margin: 0 auto;
-  padding: 25px 0 25px 0;
+  padding: 25px;
   color: ${colors.black};
   background-color: ${colors.pinkBg};
 
@@ -23,6 +22,10 @@ export const InnerWrapper = styled.div`
 
   .ant-card .ant-card-body {
     padding: 20px 10px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 15px;
   }
 `;
 

@@ -28,6 +28,20 @@ const BestSellers = () => {
       <InnerWrapper>
         <Title>{t('bestSellers.title')}</Title>
         <Swiper
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              centeredSlides: true,
+            },
+            650: {
+              slidesPerView: 2,
+              centeredSlides: true,
+            },
+            950: {
+              slidesPerView: 3,
+              centeredSlides: true,
+            },
+          }}
           slidesPerView={3}
           spaceBetween={5}
           pagination={{ clickable: true }}
