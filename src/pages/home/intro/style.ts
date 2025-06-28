@@ -9,19 +9,6 @@ export const MainWrapper = styled.div`
   height: 100vh;
   background-image: url('/images/main-flower.jpg');
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  animation: zoomAnimation 10s infinite alternate ease-in-out;
-
-  @keyframes zoomAnimation {
-    0% {
-      background-size: 100%;
-    }
-    100% {
-      background-size: 110%;
-    }
-  }
 `;
 
 export const Wrapper = styled.div`
@@ -39,6 +26,22 @@ export const Wrapper = styled.div`
   text-align: center;
   padding: 20px;
   border-radius: 10px;
+
+  @media (max-width: 1024px) {
+    width: 70%;
+    height: auto;
+    padding: 20px;
+  }
+
+  @media (max-width: 768px) {
+    width: 85%;
+    padding: 16px;
+  }
+
+  @media (max-width: 480px) {
+    width: 90%;
+    padding: 12px;
+  }
 `;
 
 export const MainInfo = styled.div`
@@ -46,17 +49,51 @@ export const MainInfo = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 40px;
+
+  @media (max-width: 768px) {
+    gap: 25px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 20px;
+  }
 `;
 
 export const Title = styled.h1`
   font-size: 7vw;
+
+  @media (max-width: 768px) {
+    font-size: 9vw;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 10vw;
+  }
 `;
 
 export const Description = styled.p`
   font-size: 16px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+  }
 `;
 
 export const Btn = styled(Button)`
   height: 50px;
   font-size: 20px;
+
+  @media (max-width: 768px) {
+    height: 45px;
+    font-size: 18px;
+  }
+
+  @media (max-width: 480px) {
+    height: 40px;
+    font-size: 16px;
+  }
 `;
