@@ -1,4 +1,4 @@
-import { Drawer as DrawerComponent } from 'antd';
+import { Drawer as DrawerComponent, Modal } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -10,8 +10,16 @@ import { DrawerContent, ListItem, Total, List, Basket, Btn } from './style';
 
 const Drawer = () => {
   const { t } = useTranslation();
-  const { cart, totalPrice, isCartOpen, openCart, closeCart } = useCart();
+  const { cart, totalPrice, isCartOpen, openCart, closeCart, clearCart } =
+    useCart();
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+
+  const handleOk = () => {
+    clearCart();
+    closeCart();
+    setIsModalOpen(false);
+  };
 
   useEffect(() => {
     const checkScreen = () => setIsMobile(window.innerWidth < 768);
@@ -43,12 +51,26 @@ const Drawer = () => {
           )}
           <Total>{t('basket.total', { total: totalPrice })}</Total>
           {cart.length > 0 && (
-            <Btn type="primary" size="large">
+            <Btn
+              type="primary"
+              size="large"
+              onClick={() => setIsModalOpen(true)}
+            >
               {t('basket.btn')}
             </Btn>
           )}
         </DrawerContent>
       </DrawerComponent>
+      <Modal
+        title={t('basket.modalTitle')}
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={() => setIsModalOpen(false)}
+        okText={t('basket.ok')}
+        cancelText={t('basket.cancel')}
+      >
+        <p>{t('basket.modal')}</p>
+      </Modal>
     </>
   );
 };

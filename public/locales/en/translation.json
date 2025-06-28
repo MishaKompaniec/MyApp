@@ -61,7 +61,11 @@
     "title": "Basket",
     "empty": "Basket is empty",
     "total": "Total: {{total}} UAH",
-    "btn": "Checkout"
+    "btn": "Checkout",
+    "modalTitle": "Order Placement",
+    "modal": "You have successfully placed your order",
+    "ok": "Ok",
+    "cancel": "Cansel"
   },
   "bestSellersBlock": {
     "title": "Best Sellers",
