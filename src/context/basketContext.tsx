@@ -1,51 +1,73 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 import { BasketContextType, BasketItem } from '../types';
 
 const BasketContext = createContext<BasketContextType | undefined>(undefined);
 
+const LOCAL_STORAGE_KEY = 'basket';
+
 export const BasketProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [basket, setBaskett] = useState<BasketItem[]>([]);
+  const [basket, setBasket] = useState<BasketItem[]>([]);
   const [isBasketOpen, setIsBasketOpen] = useState(false);
 
+  useEffect(() => {
+    const savedBasket = localStorage.getItem(LOCAL_STORAGE_KEY);
+    if (savedBasket) {
+      try {
+        setBasket(JSON.parse(savedBasket));
+      } catch (e) {
+        console.error(
+          'Error when reading a shopping cart from localStorage:',
+          e,
+        );
+        setBasket([]);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(basket));
+  }, [basket]);
+
   const addToBasket = (item: BasketItem) => {
-    setBaskett((prevCart) => {
-      const existingItem = prevCart.find((cartItem) => cartItem.id === item.id);
+    setBasket((prev) => {
+      const existingItem = prev.find((i) => i.id === item.id);
       if (existingItem) {
-        return prevCart.map((cartItem) =>
-          cartItem.id === item.id
-            ? { ...cartItem, quantity: cartItem.quantity + 1 }
-            : cartItem,
+        return prev.map((i) =>
+          i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i,
         );
       }
-      return [...prevCart, { ...item, quantity: 1 }];
+      return [...prev, { ...item, quantity: 1 }];
     });
   };
 
   const removeFromBasket = (id: string) => {
-    setBaskett((prevCart) => prevCart.filter((item) => item.id !== id));
+    setBasket((prev) => prev.filter((item) => item.id !== id));
   };
 
   const updateQuantity = (id: string, quantity: number) => {
-    setBaskett((prevCart) =>
-      prevCart.map((item) =>
+    setBasket((prev) =>
+      prev.map((item) =>
         item.id === id ? { ...item, quantity: Math.max(1, quantity) } : item,
       ),
     );
   };
-
-  const clearBasket = () => setBaskett([]);
 
   const totalPrice = basket.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0,
   );
 
-  const openBasket = () => setIsBasketOpen(true);
-  const closeBasket = () => setIsBasketOpen(false);
   const toggleBasket = () => setIsBasketOpen((prev) => !prev);
+  const closeBasket = () => setIsBasketOpen(false);
+  const openBasket = () => setIsBasketOpen(true);
+
+  const clearBasket = () => {
+    setBasket([]);
+    localStorage.removeItem(LOCAL_STORAGE_KEY);
+  };
 
   return (
     <BasketContext.Provider

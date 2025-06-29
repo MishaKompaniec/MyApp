@@ -31,7 +31,7 @@ module.exports = {
     'no-unused-vars': 'off',
     camelcase: 0,
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-    'no-console': 1,
+    'no-console': ['warn', { allow: ['warn', 'error'] }],
     'consistent-return': 0,
     quotes: [2, 'single', { avoidEscape: true }],
     'comma-dangle': ['error', 'only-multiline'],
