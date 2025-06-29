@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import { useCart } from '@/CartContext';
+import { useCart } from '@/context/basketContext';
 import { bestSellers } from '@/utils/pages';
 
 import {
@@ -20,7 +20,7 @@ import {
 } from './style';
 
 const BestSellers = () => {
-  const { cart, addToCart, toggleCart } = useCart();
+  const { basket, addToBasket, toggleBasket } = useCart();
   const { t } = useTranslation();
 
   return (
@@ -51,7 +51,7 @@ const BestSellers = () => {
           autoplay={{ delay: 3000, disableOnInteraction: false }}
         >
           {bestSellers.map((product) => {
-            const isInCart = cart.some((item) => item.id === product.id);
+            const isInCart = basket.some((item) => item.id === product.id);
 
             return (
               <SwiperSlide key={product.id}>
@@ -70,9 +70,9 @@ const BestSellers = () => {
                       type={isInCart ? 'default' : 'primary'}
                       onClick={() => {
                         if (isInCart) {
-                          toggleCart();
+                          toggleBasket();
                         } else {
-                          addToCart(product);
+                          addToBasket(product);
                         }
                       }}
                     >

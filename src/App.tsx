@@ -1,19 +1,19 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
-import { CartProvider } from './CartContext';
 import { Layout } from './components/layout';
+import { BasketProvider } from './context/basketContext';
 import Routes from './router';
 
 function App() {
   return (
-    <CartProvider>
+    <BasketProvider>
       <BrowserRouter>
         <Layout>
           <Routes />
         </Layout>
       </BrowserRouter>
-    </CartProvider>
+    </BasketProvider>
   );
 }
 

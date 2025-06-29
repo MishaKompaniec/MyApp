@@ -3,7 +3,7 @@ import { Button } from 'antd';
 import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { useCart } from '@/CartContext';
+import { useCart } from '@/context/basketContext';
 import { DrawerItemProps } from '@/types';
 
 import {
@@ -19,7 +19,7 @@ import {
 const DrawerItem: FC<DrawerItemProps> = ({
   product: { id, category, price, quantity },
 }) => {
-  const { removeFromCart, updateQuantity } = useCart();
+  const { removeFromBasket, updateQuantity } = useCart();
   const { t } = useTranslation();
 
   return (
@@ -41,7 +41,11 @@ const DrawerItem: FC<DrawerItemProps> = ({
           onClick={() => updateQuantity(id, quantity + 1)}
         />
       </QuantityControls>
-      <Btn type="text" icon={<CloseBtn />} onClick={() => removeFromCart(id)} />
+      <Btn
+        type="text"
+        icon={<CloseBtn />}
+        onClick={() => removeFromBasket(id)}
+      />
     </DrawerWrapper>
   );
 };

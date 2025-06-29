@@ -1,8 +1,8 @@
 import { Card, Button } from 'antd';
 import { useTranslation } from 'react-i18next';
 
-import { useCart } from '@/CartContext';
-import { CartItem } from '@/types';
+import { useCart } from '@/context/basketContext';
+import { BasketItem } from '@/types';
 
 import { Description, CardInfo, CardTitle, Price } from './style';
 
@@ -10,11 +10,11 @@ const ProductCard = ({
   product,
   cover,
 }: {
-  product: CartItem;
+  product: BasketItem;
   cover?: React.ReactNode;
 }) => {
-  const { cart, addToCart, toggleCart } = useCart();
-  const isInCart = cart.some((item) => item.id === product.id);
+  const { basket, addToBasket, toggleBasket } = useCart();
+  const isInCart = basket.some((item) => item.id === product.id);
   const { t } = useTranslation();
 
   return (
@@ -31,9 +31,9 @@ const ProductCard = ({
           type={isInCart ? 'default' : 'primary'}
           onClick={() => {
             if (isInCart) {
-              toggleCart();
+              toggleBasket();
             } else {
-              addToCart(product);
+              addToBasket(product);
             }
           }}
         >

@@ -13,16 +13,29 @@ export interface AdvantageItemProps {
 }
 
 export interface DrawerItemProps {
-  product: CartItem;
+  product: BasketItem;
 }
 
-export interface CartItem {
+export interface BasketItem {
   id: string;
   title: string;
   price: number;
   quantity: number;
   description: string;
   category: string;
+}
+
+export interface BasketContextType {
+  basket: BasketItem[];
+  totalPrice: number;
+  isBasketOpen: boolean;
+  addToBasket: (item: BasketItem) => void;
+  removeFromBasket: (id: string) => void;
+  updateQuantity: (id: string, quantity: number) => void;
+  openBasket: () => void;
+  closeBasket: () => void;
+  toggleBasket: () => void;
+  clearBasket: () => void;
 }
 
 export interface Advantage {

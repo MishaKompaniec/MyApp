@@ -2,7 +2,7 @@ import { Drawer as DrawerComponent, Modal } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { useCart } from '@/CartContext';
+import { useCart } from '@/context/basketContext';
 
 import { DrawerItem } from '../drawerItem';
 
@@ -10,14 +10,20 @@ import { DrawerContent, ListItem, Total, List, Basket, Btn } from './style';
 
 const Drawer = () => {
   const { t } = useTranslation();
-  const { cart, totalPrice, isCartOpen, openCart, closeCart, clearCart } =
-    useCart();
+  const {
+    basket,
+    totalPrice,
+    isBasketOpen,
+    openBasket,
+    closeBasket,
+    clearBasket,
+  } = useCart();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   const handleOk = () => {
-    clearCart();
-    closeCart();
+    clearBasket();
+    closeBasket();
     setIsModalOpen(false);
   };
 
@@ -30,19 +36,19 @@ const Drawer = () => {
 
   return (
     <>
-      <Basket onClick={openCart} src="/images/basket.png" alt="basket" />
+      <Basket onClick={openBasket} src="/images/basket.png" alt="basket" />
       <DrawerComponent
         title={t('basket.title')}
-        onClose={closeCart}
-        open={isCartOpen}
+        onClose={closeBasket}
+        open={isBasketOpen}
         width={isMobile ? '100%' : 500}
       >
         <DrawerContent>
-          {cart.length === 0 ? (
+          {basket.length === 0 ? (
             <p>{t('basket.empty')}</p>
           ) : (
             <List>
-              {cart.map((product) => (
+              {basket.map((product) => (
                 <ListItem key={product.id}>
                   <DrawerItem product={product} />
                 </ListItem>
@@ -50,7 +56,7 @@ const Drawer = () => {
             </List>
           )}
           <Total>{t('basket.total', { total: totalPrice })}</Total>
-          {cart.length > 0 && (
+          {basket.length > 0 && (
             <Btn
               type="primary"
               size="large"
