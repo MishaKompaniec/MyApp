@@ -86,10 +86,12 @@ export const Img = styled.img`
   @media (max-width: 768px) {
     width: 120px;
     height: 120px;
+    margin: 15px;
   }
 
   @media (max-width: 480px) {
     width: 65px;
     height: 65px;
+    margin: 15px;
   }
 `;

@@ -7,6 +7,37 @@ export enum Pages {
   PAGE1 = '/store',
 }
 
+export const SwiperBreakpoints = {
+  0: {
+    slidesPerView: 1,
+    centeredSlides: true,
+  },
+  480: {
+    slidesPerView: 1.2,
+    centeredSlides: true,
+  },
+  640: {
+    slidesPerView: 2,
+    centeredSlides: false,
+  },
+  768: {
+    slidesPerView: 2.5,
+    centeredSlides: false,
+  },
+  1024: {
+    slidesPerView: 3,
+    centeredSlides: false,
+  },
+  1280: {
+    slidesPerView: 4,
+    centeredSlides: false,
+  },
+  1536: {
+    slidesPerView: 5,
+    centeredSlides: false,
+  },
+};
+
 export const useAdvantagesData = (): Advantage[] => {
   const { t } = useTranslation();
 

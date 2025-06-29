@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import { useCart } from '@/context/basketContext';
-import { bestSellers } from '@/utils/pages';
+import { bestSellers, SwiperBreakpoints } from '@/utils/pages';
 
 import {
   Description,
@@ -28,22 +28,9 @@ const BestSellers = () => {
       <InnerWrapper>
         <Title>{t('bestSellers.title')}</Title>
         <Swiper
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-              centeredSlides: true,
-            },
-            650: {
-              slidesPerView: 2,
-              centeredSlides: true,
-            },
-            950: {
-              slidesPerView: 3,
-              centeredSlides: true,
-            },
-          }}
+          breakpoints={SwiperBreakpoints}
           slidesPerView={3}
-          spaceBetween={5}
+          spaceBetween={15}
           pagination={{ clickable: true }}
           modules={[Pagination, Autoplay]}
           style={{ paddingBottom: '35px' }}
@@ -57,7 +44,6 @@ const BestSellers = () => {
               <SwiperSlide key={product.id}>
                 <Card
                   hoverable
-                  style={{ width: 300 }}
                   cover={<Image alt={t(product.title)} src={product.image} />}
                 >
                   <CardInfo>
