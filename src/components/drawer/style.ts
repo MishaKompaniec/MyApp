@@ -1,6 +1,10 @@
 import { Button } from 'antd';
 import styled from 'styled-components';
 
+import { colors } from '@/theme/colors';
+
+import BasketIcon from '../icon/basket';
+
 export const DrawerContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -28,10 +32,19 @@ export const Total = styled.div`
   font-weight: 500;
 `;
 
-export const Basket = styled.img`
-  width: 35px;
-  height: 35px;
+export const Basket = styled(BasketIcon)`
+  width: 28px;
+  height: 28px;
   cursor: pointer;
+  color: white;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+
+  &:hover {
+    color: ${colors.primary};
+    transform: scale(1.15);
+  }
 `;
 
 export const Btn = styled(Button)`

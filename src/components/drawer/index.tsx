@@ -36,7 +36,7 @@ const Drawer = () => {
 
   return (
     <>
-      <Basket onClick={openBasket} src="/images/basket.png" alt="basket" />
+      <Basket onClick={openBasket} />
       <DrawerComponent
         title={t('basket.title')}
         onClose={closeBasket}

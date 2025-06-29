@@ -50,32 +50,37 @@ export const Menu = styled.div`
 export const MenuItemLink = styled(Link)`
   font-size: clamp(12px, 2vw, 16px);
   font-weight: 600;
-  color: white;
+  color: ${colors.white};
   text-decoration: none;
-  font-family: 'Montserrat';
-  transition: color 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 
   &:hover {
     color: ${colors.primary};
+    transform: scale(1.15);
   }
 `;
 
 export const MenuItem = styled.p`
   font-size: clamp(12px, 2vw, 16px);
   font-weight: 600;
-  color: white;
+  color: ${colors.white};
   text-decoration: none;
-  font-family: 'Montserrat';
-  transition: color 0.3s ease;
   cursor: pointer;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 
   &:hover {
     color: ${colors.primary};
+    transform: scale(1.15);
   }
 `;
 
 export const FlexBox = styled.div`
   display: flex;
+  align-items: center;
   gap: 15px;
 
   @media (max-width: 768px) {
