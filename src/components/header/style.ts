@@ -49,17 +49,29 @@ export const Menu = styled.div`
 
 export const MenuItemLink = styled(Link)`
   font-size: clamp(12px, 2vw, 16px);
+  font-weight: 600;
   color: white;
   text-decoration: none;
   font-family: 'Montserrat';
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: ${colors.primary};
+  }
 `;
 
 export const MenuItem = styled.p`
   font-size: clamp(12px, 2vw, 16px);
+  font-weight: 600;
   color: white;
   text-decoration: none;
   font-family: 'Montserrat';
+  transition: color 0.3s ease;
   cursor: pointer;
+
+  &:hover {
+    color: ${colors.primary};
+  }
 `;
 
 export const FlexBox = styled.div`
