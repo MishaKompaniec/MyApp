@@ -5,6 +5,10 @@ export const Wrapper = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 10px;
   padding: 15px 15px 15px 0;
+
+  @media (max-width: 768px) {
+    padding: 15px;
+  }
 `;
 
 export const Image = styled.img`

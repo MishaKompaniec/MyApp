@@ -35,7 +35,11 @@ const BestSellers = () => {
           modules={[Pagination, Autoplay]}
           style={{ paddingBottom: '35px' }}
           loop
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
         >
           {bestSellers.map((product) => {
             const isInCart = basket.some((item) => item.id === product.id);

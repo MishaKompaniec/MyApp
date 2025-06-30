@@ -7,10 +7,6 @@ export const Wrapper = styled.div`
 `;
 
 export const InnerWrapper = styled.div`
-  .ant-card .ant-card-body {
-    background-color: ${colors.lightPinkBg};
-  }
-
   margin: 0 auto;
   padding: 25px;
   color: ${colors.black};
@@ -35,6 +31,14 @@ export const Title = styled.h1`
   padding-bottom: 30px;
   font-size: 4vw;
   color: ${colors.black};
+
+  @media (max-width: 768px) {
+    font-size: 6vw;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 7vw;
+  }
 `;
 
 export const CardInfo = styled.div`
@@ -69,7 +73,6 @@ export const Price = styled.p`
 `;
 
 export const Image = styled.img`
-  width: 300px;
   height: 300px;
   object-fit: cover;
 `;
