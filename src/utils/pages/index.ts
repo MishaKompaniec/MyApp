@@ -59,7 +59,7 @@ export const useAdvantagesData = (): Advantage[] => {
 
 export const bestSellers = [
   {
-    category: 'bestSellers',
+    category: 'bestSellersBlock',
     id: 'bouquet1',
     title: 'bestSellersBlock.bouquet1.title',
     description: 'bestSellersBlock.bouquet1.description',
@@ -68,7 +68,7 @@ export const bestSellers = [
     quantity: 1,
   },
   {
-    category: 'bestSellers',
+    category: 'bestSellersBlock',
     id: 'basket1',
     title: 'bestSellersBlock.basket1.title',
     description: 'bestSellersBlock.basket1.description',
@@ -77,7 +77,7 @@ export const bestSellers = [
     quantity: 1,
   },
   {
-    category: 'bestSellers',
+    category: 'bestSellersBlock',
     id: 'aroma1',
     title: 'bestSellersBlock.aroma1.title',
     description: 'bestSellersBlock.aroma1.description',
@@ -86,7 +86,7 @@ export const bestSellers = [
     quantity: 1,
   },
   {
-    category: 'bestSellers',
+    category: 'bestSellersBlock',
     id: 'roses1',
     title: 'bestSellersBlock.roses1.title',
     description: 'bestSellersBlock.roses1.description',
@@ -95,7 +95,7 @@ export const bestSellers = [
     quantity: 1,
   },
   {
-    category: 'bestSellers',
+    category: 'bestSellersBlock',
     id: 'bouquet2',
     title: 'bestSellersBlock.bouquet2.title',
     description: 'bestSellersBlock.bouquet2.description',
@@ -104,7 +104,7 @@ export const bestSellers = [
     quantity: 1,
   },
   {
-    category: 'bestSellers',
+    category: 'bestSellersBlock',
     id: 'basket2',
     title: 'bestSellersBlock.basket2.title',
     description: 'bestSellersBlock.basket2.description',
@@ -113,7 +113,7 @@ export const bestSellers = [
     quantity: 1,
   },
   {
-    category: 'bestSellers',
+    category: 'bestSellersBlock',
     id: 'aroma2',
     title: 'bestSellersBlock.aroma2.title',
     description: 'bestSellersBlock.aroma2.description',
@@ -122,7 +122,7 @@ export const bestSellers = [
     quantity: 1,
   },
   {
-    category: 'bestSellers',
+    category: 'bestSellersBlock',
     id: 'roses2',
     title: 'bestSellersBlock.roses2.title',
     description: 'bestSellersBlock.roses2.description',

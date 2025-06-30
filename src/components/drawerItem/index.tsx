@@ -1,4 +1,5 @@
-import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
+import MinusOutlined from '@ant-design/icons/MinusOutlined';
+import PlusOutlined from '@ant-design/icons/PlusOutlined';
 import { Button } from 'antd';
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
