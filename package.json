@@ -30,7 +30,7 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "npm install --legacy-peer-deps && react-app-rewired build",
+    "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "prepare": "husky",
@@ -62,7 +62,8 @@
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
     "prettier": "^3.5.2",
-    "react-app-rewire-alias": "^1.1.7"
+    "react-app-rewire-alias": "^1.1.7",
+    "react-app-rewired": "^2.2.1"
   },
   "husky": {
     "hooks": {
