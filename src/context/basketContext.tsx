@@ -72,16 +72,16 @@ export const BasketProvider: React.FC<{ children: React.ReactNode }> = ({
   return (
     <BasketContext.Provider
       value={{
-        basket,
-        totalPrice,
-        isBasketOpen,
-        addToBasket,
         removeFromBasket,
         updateQuantity,
-        openBasket,
-        closeBasket,
         toggleBasket,
+        isBasketOpen,
+        closeBasket,
+        addToBasket,
         clearBasket,
+        totalPrice,
+        openBasket,
+        basket,
       }}
     >
       {children}

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useCart } from '@/context/basketContext';
 import { BasketItem } from '@/types';
 
-import { Description, CardInfo, CardTitle, Price } from './style';
+import { Description, CardTitle, CardInfo, Price } from './style';
 
 const ProductCard = ({
   product,
@@ -46,4 +46,4 @@ const ProductCard = ({
   );
 };
 
-export default ProductCard;
+export { ProductCard };

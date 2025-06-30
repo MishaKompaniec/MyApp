@@ -1,7 +1,6 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import ProductCard from '@/components/productCard';
+import { ProductCard } from '@/components';
 import { plants } from '@/utils/pages';
 
 import { Wrapper, Image } from './style';

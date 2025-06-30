@@ -1,13 +1,12 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {
-  Title,
   FlexWrapper,
-  ImageItem,
-  Image1,
-  ImgBlock,
   ImgWrapper,
+  ImageItem,
+  ImgBlock,
+  Image1,
+  Title,
   Inst,
 } from './style';
 

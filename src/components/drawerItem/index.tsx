@@ -1,6 +1,6 @@
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { useCart } from '@/context/basketContext';

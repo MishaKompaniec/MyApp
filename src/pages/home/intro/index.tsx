@@ -1,13 +1,12 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
 import {
+  Description,
   MainWrapper,
+  MainInfo,
   Wrapper,
   Title,
-  Description,
-  MainInfo,
   Btn,
 } from './style';
 

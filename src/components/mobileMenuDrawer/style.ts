@@ -38,14 +38,12 @@ export const MenuItemLink = styled(Link)`
   font-size: 20px;
   color: white;
   text-decoration: none;
-  font-family: 'Montserrat';
 `;
 
 export const MenuItem = styled.p`
   font-size: 20px;
   color: white;
   text-decoration: none;
-  font-family: 'Montserrat';
   cursor: pointer;
 `;
 
@@ -54,6 +52,6 @@ export const CloseIconWrapper = styled.div`
   top: 15px;
   right: 15px;
   cursor: pointer;
-  color: white;
+  color: ${colors.white};
   font-size: 20px;
 `;

@@ -97,7 +97,7 @@ export const BurgerButton = styled.button`
     font-size: 24px;
     background: none;
     border: none;
-    color: white;
+    color: ${colors.white};
     cursor: pointer;
   }
 `;

@@ -1,6 +1,4 @@
-import React from 'react';
-
-import ProductCard from '@/components/productCard';
+import { ProductCard } from '@/components';
 import { bouquets } from '@/utils/pages';
 
 import { Wrapper, Image } from './style';

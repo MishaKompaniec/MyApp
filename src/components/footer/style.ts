@@ -22,5 +22,6 @@ export const FlexBox = styled.div`
 
 export const FooterText = styled.p`
   width: fit-content;
-  color: white;
+  line-height: 15px;
+  color: ${colors.white};
 `;

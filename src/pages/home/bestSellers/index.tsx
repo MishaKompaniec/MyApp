@@ -9,14 +9,14 @@ import { useCart } from '@/context/basketContext';
 import { bestSellers, SwiperBreakpoints } from '@/utils/pages';
 
 import {
+  InnerWrapper,
   Description,
-  Wrapper,
-  CardInfo,
   CardTitle,
+  CardInfo,
+  Wrapper,
   Image,
   Title,
   Price,
-  InnerWrapper,
 } from './style';
 
 const BestSellers = () => {

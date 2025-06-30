@@ -1,5 +1,5 @@
 import { Drawer as DrawerComponent, Modal } from 'antd';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { useCart } from '@/context/basketContext';
@@ -11,12 +11,12 @@ import { DrawerContent, ListItem, Total, List, Basket, Btn } from './style';
 const Drawer = () => {
   const { t } = useTranslation();
   const {
-    basket,
-    totalPrice,
     isBasketOpen,
-    openBasket,
     closeBasket,
     clearBasket,
+    totalPrice,
+    openBasket,
+    basket,
   } = useCart();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -81,4 +81,4 @@ const Drawer = () => {
   );
 };
 
-export default Drawer;
+export { Drawer };

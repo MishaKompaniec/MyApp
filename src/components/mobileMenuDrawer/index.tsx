@@ -3,24 +3,24 @@ import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
-import Drawer from '../drawer';
+import { Drawer } from '../drawer';
 import { LanguageSelect } from '../select';
 
 import {
-  CloseIconWrapper,
-  MenuItem,
-  MenuItemLink,
   MobileMenuDrawerEl,
+  CloseIconWrapper,
+  MenuItemLink,
+  MenuItem,
   Wrapper,
 } from './style';
 interface MobileMenuDrawerProps {
   isMobileMenuOpen: boolean;
-  setIsMobileMenuOpen: any;
+  setIsMobileMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const MobileMenuDrawer: FC<MobileMenuDrawerProps> = ({
-  isMobileMenuOpen,
   setIsMobileMenuOpen,
+  isMobileMenuOpen,
 }) => {
   const navigate = useNavigate();
   const { t } = useTranslation();

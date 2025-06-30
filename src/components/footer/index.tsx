@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { FooterWrapper, FooterText, FlexBox } from './style';
 
 const Footer = () => (

@@ -1,6 +1,6 @@
-import React from 'react';
+import { FC } from 'react';
 
-const BasketIcon: React.FC<{ className?: string; onClick?: () => void }> = ({
+const BasketIcon: FC<{ className?: string; onClick?: () => void }> = ({
   className,
   onClick,
 }) => (
