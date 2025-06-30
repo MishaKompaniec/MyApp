@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  useMemo,
+} from 'react';
 
 import { BasketContextType, BasketItem } from '../types';
 
@@ -60,6 +66,10 @@ export const BasketProvider: React.FC<{ children: React.ReactNode }> = ({
     0,
   );
 
+  const totalItems = useMemo(() => {
+    return basket.reduce((acc, item) => acc + (item.quantity || 1), 0);
+  }, [basket]);
+
   const toggleBasket = () => setIsBasketOpen((prev) => !prev);
   const closeBasket = () => setIsBasketOpen(false);
   const openBasket = () => setIsBasketOpen(true);
@@ -81,6 +91,7 @@ export const BasketProvider: React.FC<{ children: React.ReactNode }> = ({
         clearBasket,
         totalPrice,
         openBasket,
+        totalItems,
         basket,
       }}
     >

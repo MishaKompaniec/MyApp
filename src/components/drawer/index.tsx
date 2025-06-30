@@ -6,7 +6,15 @@ import { useCart } from '@/context/basketContext';
 
 import { DrawerItem } from '../drawerItem';
 
-import { DrawerContent, Total, List, Basket, Btn } from './style';
+import {
+  DrawerContent,
+  BasketWrapper,
+  Basket,
+  Total,
+  Badge,
+  List,
+  Btn,
+} from './style';
 
 const Drawer = () => {
   const { t } = useTranslation();
@@ -16,6 +24,7 @@ const Drawer = () => {
     clearBasket,
     totalPrice,
     openBasket,
+    totalItems,
     basket,
   } = useCart();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,7 +45,10 @@ const Drawer = () => {
 
   return (
     <>
-      <Basket onClick={openBasket} />
+      <BasketWrapper>
+        <Basket onClick={openBasket} />
+        {totalItems > 0 && <Badge>{totalItems}</Badge>}
+      </BasketWrapper>
       <DrawerComponent
         title={t('basket.title')}
         onClose={closeBasket}

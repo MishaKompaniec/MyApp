@@ -36,6 +36,7 @@ export interface BasketContextType {
   closeBasket: () => void;
   toggleBasket: () => void;
   clearBasket: () => void;
+  totalItems: number;
 }
 
 export interface Advantage {

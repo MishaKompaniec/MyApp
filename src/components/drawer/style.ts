@@ -30,6 +30,11 @@ export const Total = styled.div`
   font-weight: 500;
 `;
 
+export const BasketWrapper = styled.div`
+  position: relative;
+  height: 28px;
+`;
+
 export const Basket = styled(BasketIcon)`
   width: 28px;
   height: 28px;
@@ -58,4 +63,20 @@ export const Btn = styled(Button)`
     height: 40px;
     font-size: 16px;
   }
+`;
+
+export const Badge = styled.div`
+  position: absolute;
+  top: -6px;
+  right: -9px;
+  background: ${colors.pink};
+  color: ${colors.white};
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
 `;
