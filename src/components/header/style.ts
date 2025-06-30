@@ -41,10 +41,6 @@ export const Menu = styled.div`
   align-items: center;
   gap: 100px;
   margin: 0 auto;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
 `;
 
 export const MenuItemLink = styled(Link)`
@@ -84,16 +80,14 @@ export const FlexBox = styled.div`
   gap: 15px;
 
   @media (max-width: 768px) {
-    display: none;
+    margin-left: auto;
   }
 `;
 
 export const BurgerButton = styled.button`
-  display: none;
-  margin-left: auto;
+  margin-left: 20px;
 
   @media (max-width: 768px) {
-    display: block;
     font-size: 24px;
     background: none;
     border: none;

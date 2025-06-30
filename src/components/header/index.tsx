@@ -1,5 +1,5 @@
 import { MenuOutlined } from '@ant-design/icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
 
@@ -23,6 +23,7 @@ const Header = () => {
   const location = useLocation();
   const { t } = useTranslation();
 
+  const [isMobile, setIsMobile] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
@@ -44,29 +45,40 @@ const Header = () => {
     }, 50);
   };
 
+  useEffect(() => {
+    const checkScreen = () => setIsMobile(window.innerWidth < 768);
+    checkScreen();
+    window.addEventListener('resize', checkScreen);
+    return () => window.removeEventListener('resize', checkScreen);
+  }, []);
+
   return (
     <HeaderWrapper>
       <LogoWrapper to="/">
         <Logo src="/images/logo.png" alt="flower" />
       </LogoWrapper>
-      <Menu>
-        <MenuItemLink to="/store">{t('header.store')}</MenuItemLink>
-        <MenuItem onClick={() => scrollToSection('about-us')}>
-          {t('header.about')}
-        </MenuItem>
-        <MenuItem onClick={() => scrollToSection('contacts')}>
-          {t('header.contacts')}
-        </MenuItem>
-      </Menu>
+      {!isMobile && (
+        <Menu>
+          <MenuItemLink to="/store">{t('header.store')}</MenuItemLink>
+          <MenuItem onClick={() => scrollToSection('about-us')}>
+            {t('header.about')}
+          </MenuItem>
+          <MenuItem onClick={() => scrollToSection('contacts')}>
+            {t('header.contacts')}
+          </MenuItem>
+        </Menu>
+      )}
 
       <FlexBox>
         <Drawer />
-        <LanguageSelect />
+        {!isMobile && <LanguageSelect />}
       </FlexBox>
 
-      <BurgerButton onClick={() => setIsMobileMenuOpen((prev) => !prev)}>
-        <MenuOutlined />
-      </BurgerButton>
+      {isMobile && (
+        <BurgerButton onClick={() => setIsMobileMenuOpen((prev) => !prev)}>
+          <MenuOutlined />
+        </BurgerButton>
+      )}
 
       <MobileMenuDrawer
         setIsMobileMenuOpen={setIsMobileMenuOpen}

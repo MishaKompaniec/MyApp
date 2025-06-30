@@ -3,7 +3,6 @@ import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
-import { Drawer } from '../drawer';
 import { LanguageSelect } from '../select';
 
 import {
@@ -62,7 +61,6 @@ const MobileMenuDrawer: FC<MobileMenuDrawerProps> = ({
         <MenuItem onClick={() => scrollToSection('contacts')}>
           {t('header.contacts')}
         </MenuItem>
-        <Drawer />
         <LanguageSelect />
       </Wrapper>
     </MobileMenuDrawerEl>
