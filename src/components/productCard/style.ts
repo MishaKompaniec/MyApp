@@ -28,8 +28,8 @@ export const Description = styled.p`
   max-height: 3em;
 `;
 
-export const Price = styled.h3`
-  font-size: 18px;
+export const Price = styled.p`
+  font-size: 16px;
   font-weight: bold;
   color: ${colors.pink};
 `;

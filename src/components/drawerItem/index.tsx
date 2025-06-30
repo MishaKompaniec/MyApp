@@ -8,8 +8,8 @@ import { useCart } from '@/context/basketContext';
 import { DrawerItemProps } from '@/types';
 
 import {
+  DrawerItemWrapper,
   QuantityControls,
-  DrawerWrapper,
   Counter,
   Title,
   Price,
@@ -24,7 +24,7 @@ const DrawerItem: FC<DrawerItemProps> = ({
   const { t } = useTranslation();
 
   return (
-    <DrawerWrapper>
+    <DrawerItemWrapper>
       <Title>{t(`${category}.${id}.title`)}</Title>
       <Price>
         {price} {t('currency.uah')}
@@ -47,7 +47,7 @@ const DrawerItem: FC<DrawerItemProps> = ({
         icon={<CloseBtn />}
         onClick={() => removeFromBasket(id)}
       />
-    </DrawerWrapper>
+    </DrawerItemWrapper>
   );
 };
 

@@ -6,7 +6,7 @@ import { useCart } from '@/context/basketContext';
 
 import { DrawerItem } from '../drawerItem';
 
-import { DrawerContent, ListItem, Total, List, Basket, Btn } from './style';
+import { DrawerContent, Total, List, Basket, Btn } from './style';
 
 const Drawer = () => {
   const { t } = useTranslation();
@@ -49,9 +49,7 @@ const Drawer = () => {
           ) : (
             <List>
               {basket.map((product) => (
-                <ListItem key={product.id}>
-                  <DrawerItem product={product} />
-                </ListItem>
+                <DrawerItem product={product} />
               ))}
             </List>
           )}

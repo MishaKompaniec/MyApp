@@ -9,6 +9,10 @@ export const DrawerContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
+
+  @media (max-width: 768px) {
+    gap: 30px;
+  }
 `;
 
 export const Logo = styled.img`
@@ -18,12 +22,6 @@ export const Logo = styled.img`
 
 export const List = styled.ul`
   padding: 0;
-`;
-
-export const ListItem = styled.li`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 `;
 
 export const Total = styled.div`
