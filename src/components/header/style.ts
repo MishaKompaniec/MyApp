@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { colors } from '@/theme/colors';
@@ -37,13 +37,15 @@ export const Logo = styled.img`
 
 export const Menu = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 100px;
+  gap: 50px;
   margin: 0 auto;
+  padding: 0 15px;
 `;
 
-export const MenuItemLink = styled(Link)`
+export const MenuItemLink = styled(NavLink).attrs(() => ({
+  end: true,
+}))`
   font-size: clamp(12px, 2vw, 16px);
   font-weight: 600;
   color: ${colors.white};
@@ -52,7 +54,8 @@ export const MenuItemLink = styled(Link)`
     color 0.3s ease,
     transform 0.3s ease;
 
-  &:hover {
+  &:hover,
+  &.active {
     color: ${colors.primary};
     transform: scale(1.15);
   }

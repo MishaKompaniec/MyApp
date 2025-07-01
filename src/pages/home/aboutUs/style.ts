@@ -81,6 +81,7 @@ const rotate = keyframes`
 export const Img = styled.img`
   width: 150px;
   height: 150px;
+  margin: 20px;
   animation: ${rotate} 10s linear infinite;
 
   @media (max-width: 768px) {

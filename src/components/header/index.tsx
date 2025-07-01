@@ -59,6 +59,7 @@ const Header = () => {
       </LogoWrapper>
       {!isMobile && (
         <Menu>
+          <MenuItemLink to="/">{t('header.main')}</MenuItemLink>
           <MenuItemLink to="/store">{t('header.store')}</MenuItemLink>
           <MenuItem onClick={() => scrollToSection('about-us')}>
             {t('header.about')}
