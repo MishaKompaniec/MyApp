@@ -1,9 +1,8 @@
 import { Button } from 'antd';
 import styled from 'styled-components';
 
+import BasketIcon from '@/icon/basket';
 import { colors } from '@/theme/colors';
-
-import BasketIcon from '../icon/basket';
 
 export const DrawerContent = styled.div`
   display: flex;
