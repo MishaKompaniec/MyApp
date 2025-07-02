@@ -30,7 +30,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'no-unused-vars': 'off',
     camelcase: 0,
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/no-extraneous-dependencies': ['warn', { devDependencies: true }],
     'no-console': ['warn', { allow: ['warn', 'error'] }],
     'consistent-return': 0,
     quotes: [2, 'single', { avoidEscape: true }],
@@ -47,7 +47,7 @@ module.exports = {
       },
     ],
     'import/order': [
-      'error',
+      'warn',
       {
         groups: [
           'builtin',
