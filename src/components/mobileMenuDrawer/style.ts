@@ -50,7 +50,7 @@ export const MenuItem = styled.p`
 export const CloseIconWrapper = styled.div`
   position: absolute;
   top: 15px;
-  right: 15px;
+  right: 30px;
   cursor: pointer;
   color: ${colors.white};
   font-size: 20px;

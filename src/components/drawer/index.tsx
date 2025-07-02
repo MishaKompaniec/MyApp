@@ -1,4 +1,4 @@
-import { Drawer as DrawerComponent, Modal } from 'antd';
+import { Drawer as AntDrawer, Modal } from 'antd';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -49,7 +49,7 @@ const Drawer = () => {
         <Basket onClick={openBasket} />
         {totalItems > 0 && <Badge>{totalItems}</Badge>}
       </BasketWrapper>
-      <DrawerComponent
+      <AntDrawer
         title={t('basket.title')}
         onClose={closeBasket}
         open={isBasketOpen}
@@ -76,7 +76,7 @@ const Drawer = () => {
             </Btn>
           )}
         </DrawerContent>
-      </DrawerComponent>
+      </AntDrawer>
       <Modal
         title={t('basket.modalTitle')}
         open={isModalOpen}
